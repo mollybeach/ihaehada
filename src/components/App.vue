@@ -54,10 +54,10 @@
         </router-link>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app>
+    <v-toolbar app >
       <v-toolbar-side-icon @click.stop="updateNaviBar"></v-toolbar-side-icon>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Firebase</span>
+      <v-toolbar-title class="headline " >
+        <span>Korean Lessons</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
@@ -129,5 +129,9 @@ export default {
 <style>
   p {
   margin-bottom: 2px;
+  }
+  v-toolbar{
+    font-size: 1.5rem;
+    color: hotpink;
   }
 </style>

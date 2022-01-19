@@ -3,21 +3,106 @@
   <body>
     <nav>
       <ul>
-        <li><router-link to="/" style="text-decoration: none; color: inherit;">Home</router-link></li>
-        <li><router-link to="/about" style="text-decoration: none; color: inherit;">About</router-link></li>
-        <li><router-link to="/contact" style="text-decoration: none; color: inherit;">Contact</router-link></li>
-        <li><router-link to="/top" style="text-decoration: none; color: inherit;">Top</router-link></li>
-        <li><router-link to="/hello" style="text-decoration: none; color: inherit;">Hello</router-link></li>
-        <li><router-link to="/goodbye" style="text-decoration: none; color: inherit;">Goodbye</router-link></li>
-        <li><router-link to="/files" style="text-decoration: none; color: inherit;">404</router-link></li>
-        <li><router-link to="/500" style="text-decoration: none; color: inherit;">500</router-link></li>
+        <li><router-link to="/"></router-link></li>
+
       </ul>
     </nav>
     <main>
       <h1>{{ title }}</h1>
-      <button @click="changeTitle"><h1>Korean Lessons</h1></button>
       <router-view></router-view>
+      <div class="div-top">
+            <card-component class="top-card">
+        <h1 slot="header">Korean Lessons</h1>
+          <div class="word">
+            <div class="english">hello</div>
+            <div class="korean korean8">안녕하세요</div>
+            <div class="hear">
+              <button class="read-button" @click="readKoreanWord8">Speak</button>
+              <div class="pronunciation">[an-nyeong-ha-se-yo?]</div>
+            </div>
+          </div>
+          <div class="word">
+            <div class="english">I</div>
+            <div class="korean korean9">저는</div>
+            <div class="hear">
+              <button class="read-button" @click="readKoreanWord9">Speak</button>
+              <div class="pronunciation">[jeo-neun?]</div>
+            </div>
+          </div>
+            <div class="word">
+            <div class="english">to be; is; I am</div>
+            <div class="korean korean10">  저는말리입니다</div>
+            <div class="hear">
+              <button class="read-button" @click="readKoreanWord10">Speak</button>
+              <div class="pronunciation">[jeo-neun(molly)imnida ]</div>
+            </div>
+          </div>
+            <div class="word">
+            <div class="english">nice to meet you</div>
+            <div class="korean korean11">반갑습니다</div>
+            <div class="hear">
+              <button class="read-button" @click="readKoreanWord11">Speak</button>
+              <div class="pronunciation">[ban-gap-seum-nida]</div>
+            </div>
+          </div>
+            </card-component>
+            
+      </div>
       <container>
+
+<table class="content-table">
+  <caption>Vowels</caption>
+  <thead>
+    <tr>
+          <th>English</th>
+          <th>Korean</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="active-row">
+      <td>[ah]</td>
+      <td><button class="read-button vowel1" @click="readKoreanVowel1">ㅏ</button></td>
+    </tr>
+    <tr class="active-row">
+      <td>[yah]</td>
+      <td><button class="read-button vowel2" @click="readKoreanVowel2">ㅑ</button></td>
+    </tr>
+    <tr class="active-row">
+      <td>[uh]</td>
+      <td><button class="read-button vowel3" @click="readKoreanVowel3">ㅓ</button></td>
+    </tr>
+    <tr class="active-row">
+      <td>[yuh]</td>
+      <td><button class="read-button vowel4" @click="readKoreanVowel4">ㅕ</button></td>
+    </tr>
+    <tr class="active-row">
+      <td>[o]</td>
+      <td><button class="read-button vowel5" @click="readKoreanVowel5">ㅗ</button></td>
+    </tr>
+    <tr class="active-row">
+      <td>[yo]</td>
+      <td><button class="read-button vowel6" @click="readKoreanVowel6">ㅛ</button></td>
+    </tr>
+    <tr class="active-row">
+      <td>[oo]</td>
+      <td><button class="read-button vowel7" @click="readKoreanVowel7">ㅜ</button></td>
+    </tr>
+    <tr class="active-row">
+      <td>[yoo]</td>
+      <td><button class="read-button vowel8" @click="readKoreanVowel8">ㅠ</button></td>
+    </tr>
+    <tr class="active-row">
+      <td>[eu]</td>
+      <td><button class="read-button vowel9" @click="readKoreanVowel9">ㅡ</button></td>
+    </tr>
+    <tr class="active-row">
+      <td>[ee]</td>
+      <td><button class="read-button vowel10" @click="readKoreanVowel10">ㅣ</button></td>
+    </tr>
+
+  </tbody>
+</table>
+
       <card-component class="card">
         <h1 slot="header">Wednesday January 12th 2022</h1>
           <div class="word">
@@ -76,19 +161,17 @@
               <div class="pronunciation">[yo][yo]</div>
             </div>
           </div>
-
-
       </card-component>
         <card-component class="card">
         <h1 slot="header">Wednesday January 19th 2022</h1>
       </card-component>
         <card-component class="card">
-        <h1 slot="header">Wednesday January 29th 2022</h1>
+        <h1 slot="header">Wednesday January 25th 2022</h1>
       </card-component>
 </container>
     </main>
 <!-- add an image -->
-    <img src="https://www.90daykorean.com/wp-content/uploads/2014/10/Vowels-Hangeul-Keyboard-min.png" alt="">
+
 
 
 
@@ -135,7 +218,7 @@ export default {
     msg.text = document.querySelector('.korean4').textContent;
     msg.lang = 'ko-KR';
     window.speechSynthesis.speak(msg);
-   },
+  },
     readKoreanWord5() {
     var msg = new SpeechSynthesisUtterance();
     msg.text = document.querySelector('.korean5').textContent;
@@ -153,7 +236,93 @@ export default {
     msg.text = document.querySelector('.korean7').textContent;
     msg.lang = 'ko-KR';
     window.speechSynthesis.speak(msg);
-  }
+    },
+    readKoreanWord8() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.korean8').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+    },
+    readKoreanWord9() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.korean9').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+      },
+    readKoreanWord10() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.korean10').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+  },
+    readKoreanWord11() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.korean11').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+    },
+    readKoreanVowel1() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.vowel1').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+  },
+    readKoreanVowel2() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.vowel2').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+    },
+    readKoreanVowel3() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.vowel3').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+    },
+    readKoreanVowel4() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.vowel4').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+    },
+    readKoreanVowel5() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.vowel5').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+    },
+    readKoreanVowel6() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.vowel6').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+    },
+    readKoreanVowel7() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.vowel7').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+    },
+    readKoreanVowel8() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.vowel8').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+    },
+    readKoreanVowel9() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.vowel9').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+    },
+    readKoreanVowel10() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.vowel10').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+    },
+
+    
   
   }
 //make a button to read aloud text to speech korean word
@@ -174,7 +343,7 @@ ul {
 }
 
 li{
-  background-color: pink;
+
   color: white;
   border-radius: 1px;
   padding: 10px;
@@ -187,13 +356,33 @@ a router-link {
 container{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+}
+.div-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 card-component {
   background-color: #f5f5f5;
 
 }
+.top-card{
+  background: #fff;
+  color: #333;
+  font-weight: 100;
+  font-family: "Proxima Nova";
+  text-align: center;
+  width: 80%;
+  border-radius: 2rem;
+  box-shadow: 0 8px 96px pink;
+
+}
+
 .card{
   background: #fff;
   color: #333;
@@ -202,6 +391,7 @@ card-component {
   text-align: center;
   padding: 3rem;
   width: 30%;
+  border-radius: 2rem;
   margin: 50px;
   border-radius: 2rem;
   box-shadow: 0 8px 96px pink;
@@ -222,7 +412,10 @@ card-component {
 h1 {
   font-size: 3.5em;
   color: #c6a0be;
-
+}
+caption {
+  font-size: 3.5em;
+  color: #c6a0be;
 }
 .english{
   font-size: 2.5em;
@@ -254,6 +447,48 @@ h1 {
   margin: 10px;
   font-weight: bold;
   font-size: 1.5em;
+}
+* {
+  font-family: sans-serif; /* Change your font family */
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #c6a0be;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #c6a0be;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #c6a0be;
 }
 
 </style>
