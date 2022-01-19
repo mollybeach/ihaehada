@@ -54,7 +54,7 @@
   <caption>Vowels</caption>
   <thead>
     <tr>
-          <th>English</th>
+          <th>Romanized </th>
           <th>Korean</th>
     </tr>
   </thead>
@@ -390,7 +390,6 @@ card-component {
   font-family: "Proxima Nova";
   text-align: center;
   padding: 3rem;
-  width: 30%;
   border-radius: 2rem;
   margin: 50px;
   border-radius: 2rem;
@@ -410,7 +409,7 @@ card-component {
   color: gold;
 }
 h1 {
-  font-size: 3.5em;
+  font-size: 2.5em;
   color: #c6a0be;
 }
 caption {
@@ -418,12 +417,12 @@ caption {
   color: #c6a0be;
 }
 .english{
-  font-size: 2.5em;
+  font-size: 1.9em;
   color: hotpink;
   font-weight: bold;
 }
 .korean{
-  font-size: 2.9em;
+  font-size: 2.5em;
   color: hotpink;
   font-weight: bold;
 }
@@ -435,7 +434,7 @@ caption {
   align-items: center;
 }
 .pronunciation{
-  font-size: 2em;
+  font-size: 1.2em;
   color: hotpink;
   font-weight: bold;
 }
