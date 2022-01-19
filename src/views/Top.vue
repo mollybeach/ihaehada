@@ -9,45 +9,22 @@
     </nav>
     <main>
       <h1>{{ title }}</h1>
-      <router-view></router-view>
       <div class="div-top">
-            <card-component class="top-card">
-        <h1 slot="header">Korean Lessons</h1>
-          <div class="word">
-            <div class="english">hello</div>
-            <div class="korean korean8">안녕하세요</div>
-            <div class="hear">
-              <button class="read-button" @click="readKoreanWord8">Speak</button>
-              <div class="pronunciation">[an-nyeong-ha-se-yo?]</div>
-            </div>
+      <router-view></router-view>
+      <card-component class="top-card">
+      <h1 slot="header">Korean Lessons</h1>
+      <div class="word">
+      <div  v-for="item in items.slice(0,4)" :key=item.id > 
+      <div class="english">{{item.id}}</div>
+      <div class="hear" v-for="value in item.values" :key=value.values v-on:click="readAloud(value.korean)">
+          <button class="read-button korean">{{value.korean}}</button>
+          <div class="pronunciation">{{value.romance}}</div>
           </div>
-          <div class="word">
-            <div class="english">I</div>
-            <div class="korean korean9">저는</div>
-            <div class="hear">
-              <button class="read-button" @click="readKoreanWord9">Speak</button>
-              <div class="pronunciation">[jeo-neun?]</div>
-            </div>
-          </div>
-            <div class="word">
-            <div class="english">to be; is; I am</div>
-            <div class="korean korean10">  저는말리입니다</div>
-            <div class="hear">
-              <button class="read-button" @click="readKoreanWord10">Speak</button>
-              <div class="pronunciation">[jeo-neun(molly)imnida ]</div>
-            </div>
-          </div>
-            <div class="word">
-            <div class="english">nice to meet you</div>
-            <div class="korean korean11">반갑습니다</div>
-            <div class="hear">
-              <button class="read-button" @click="readKoreanWord11">Speak</button>
-              <div class="pronunciation">[ban-gap-seum-nida]</div>
-            </div>
-          </div>
-            </card-component>
-            
+        </div>
       </div>
+      </card-component>
+      </div>
+      <!-- write a component where onclick of the button with the class="read" it will read the id value for that button aloud by calling the function readAloud() and passes the id to that function in the scripts-->
       <container>
 
 <table class="content-table">
@@ -58,109 +35,23 @@
           <th>Korean</th>
     </tr>
   </thead>
-  <tbody>
-    <tr class="active-row">
-      <td>[ah]</td>
-      <td><button class="read-button vowel1" @click="readKoreanVowel1">ㅏ</button></td>
-    </tr>
-    <tr class="active-row">
-      <td>[yah]</td>
-      <td><button class="read-button vowel2" @click="readKoreanVowel2">ㅑ</button></td>
-    </tr>
-    <tr class="active-row">
-      <td>[uh]</td>
-      <td><button class="read-button vowel3" @click="readKoreanVowel3">ㅓ</button></td>
-    </tr>
-    <tr class="active-row">
-      <td>[yuh]</td>
-      <td><button class="read-button vowel4" @click="readKoreanVowel4">ㅕ</button></td>
-    </tr>
-    <tr class="active-row">
-      <td>[o]</td>
-      <td><button class="read-button vowel5" @click="readKoreanVowel5">ㅗ</button></td>
-    </tr>
-    <tr class="active-row">
-      <td>[yo]</td>
-      <td><button class="read-button vowel6" @click="readKoreanVowel6">ㅛ</button></td>
-    </tr>
-    <tr class="active-row">
-      <td>[oo]</td>
-      <td><button class="read-button vowel7" @click="readKoreanVowel7">ㅜ</button></td>
-    </tr>
-    <tr class="active-row">
-      <td>[yoo]</td>
-      <td><button class="read-button vowel8" @click="readKoreanVowel8">ㅠ</button></td>
-    </tr>
-    <tr class="active-row">
-      <td>[eu]</td>
-      <td><button class="read-button vowel9" @click="readKoreanVowel9">ㅡ</button></td>
-    </tr>
-    <tr class="active-row">
-      <td>[ee]</td>
-      <td><button class="read-button vowel10" @click="readKoreanVowel10">ㅣ</button></td>
-    </tr>
-
-  </tbody>
+   <tr class="active-row" >
+     <tr  class="active-row" v-for="vowel in vowels" :key=vowel.id  > 
+       <td class="pronunciation">{{vowel.id}}</td>
+        <td  ><button class="read-button korean" v-on:click="readAloud(vowel.text)" >{{vowel.text}}</button></td>
+     </tr>
 </table>
-
-      <card-component class="card">
-        <h1 slot="header">Wednesday January 12th 2022</h1>
-          <div class="word">
-            <div class="english">tooth</div>
-            <div class="korean korean1">이</div>
-            <div class="hear">
-              <button class="read-button" @click="readKoreanWord1">Speak</button>
-              <div class="pronunciation">[ee]</div>
-            </div>
+<card-component class="card">
+      <h1 slot="header">Wednesday January 12th 2022</h1>
+      <div class="word">
+      <div  v-for="item in items.slice(4,11)" :key=item.id > 
+      <div class="english">{{item.id}}</div>
+      <div class="hear" v-for="value in item.values" :key=value.values v-on:click="readAloud(value.korean)">
+          <button class="read-button korean">{{value.korean}}</button>
+          <div class="pronunciation">{{value.romance}}</div>
           </div>
-          <div class="word">
-            <div class="english">cucumber</div>
-            <div class="korean korean2">오이</div>
-            <div class="hear">
-              <button class="read-button" @click="readKoreanWord2">Speak</button>
-              <div class="pronunciation">[o][ee]</div>
-            </div>
-          </div>
-          <div class="word">
-            <div class="english">child</div>
-            <div class="korean korean3">아이</div>
-            <div class="hear">
-              <button class="read-button" @click="readKoreanWord3">Speak</button>
-              <div class="pronunciation">[ah][ee]</div>
-            </div>
-          </div>
-          <div class="word">
-            <div class="english">reason</div>
-            <div class="korean korean4">이유</div>
-            <div class="hear">
-              <button class="read-button" @click="readKoreanWord4">Speak</button>
-              <div class="pronunciation">[ee][yoo]</div>
-            </div>
-          </div>
-            <div class="word">
-            <div class="english">milk</div>
-            <div class="korean korean5">우유</div>
-            <div class="hear">
-              <button class="read-button" @click="readKoreanWord5">Speak</button>
-              <div class="pronunciation">[oo][yoo]</div>
-            </div>
-          </div>
-            <div class="word">
-            <div class="english">fox</div>
-            <div class="korean korean6">여우</div>
-            <div class="hear">
-              <button class="read-button" @click="readKoreanWord6">Speak</button>
-              <div class="pronunciation">[yuh][oo]</div>
-            </div>
-          </div>
-            <div class="word">
-            <div class="english">yo-yo</div>
-            <div class="korean korean7">요요</div>
-            <div class="hear">
-              <button class="read-button" @click="readKoreanWord7">Speak</button>
-              <div class="pronunciation">[yo][yo]</div>
-            </div>
-          </div>
+        </div>
+      </div>
       </card-component>
         <card-component class="card">
         <h1 slot="header">Wednesday January 19th 2022</h1>
@@ -170,13 +61,7 @@
       </card-component>
 </container>
     </main>
-<!-- add an image -->
-
-
-
-
-    
-  </body>
+    </body>
 </template>
 
 <script>
@@ -184,146 +69,90 @@ export default {
   data() {
     return {
     items: [
-      { id: "tooth", text: "이" },
-      { id: "cucumber", text: "오이" },
-      { id: "child", text: "오이" },
-      { id: "fox", text: "오이" }
-    ]
+      //greetings
+      { id: "hello", values: [{  
+                                  korean: "안녕하세요",
+                                  romance: "ahn-nyeong-ha-se-yo?"
+                              }] 
+            },
+      { id: "I", values: [{  
+                                  korean: "저는",
+                                  romance: "jeo-neun"
+                                  }]
+            },
+      { id: "to be; is; I am", values: [{  
+                                  korean: "저는말리입니다",
+                                  romance: "jeo-neun(molly)imnida"
+                              }] 
+            },
+      { id: "nice to meet you", values: [{  korean: "반갑습니다",
+                                  romance: "ban-gap-seum-nida"
+                              }] 
+            },
+      //day 1
+      { id: "tooth", values: [{  
+                                  korean: "이",
+                                  romance: "an-nyeong-ha-se-yo?"
+                              }] 
+            },
+      { id: "cucumber", values: [{  
+                                  korean: "오이",
+                                  romance: "oh-ee"
+                                  }]
+            },
+      { id: "child", values: [{  
+                                  korean: "아이",
+                                  romance: "ah-ee"
+                              }] 
+            },
+      { id: "reason", values: [{  korean: "이유",
+                                  romance: "ee-yuh"
+                              }] 
+            },
+      { id: "milk", values: [{  
+                                  korean: "우유",
+                                  romance: "oh-yoo"
+                              }]
+            },
+      { id: "fox", values: [{  
+                                  korean: "여우",
+                                  romance: "yuh-oh"
+                            }] 
+            },
+      { id: "yo-yo", values: [{  
+                                  korean: "요요",
+                                  romance: "yo-yo"
+                              }] 
+            },
+      //day2
+      
+
+    ],
+    vowels: [
+      { id: "ah", text: "ㅏ" },
+      { id: "yah", text: "ㅑ" },
+      { id: "uh", text: "ㅓ" },
+      { id: "yuh", text: "ㅕ" },
+      { id: "o", text: "ㅗ" },
+      { id: "yo", text: "ㅛ" },
+      { id: "oo", text: "ㅜ" },
+      { id: "yoo", text: "ㅠ" },
+      { id: "eu", text: "ㅡ" },
+      { id: "ee", text: "ㅣ" }
+    ]  
   }
   },
   methods: {
     changeTitle() {
       this.title = 'Goodbye'
     },
-    readKoreanWord1() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.korean1').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-  },
-    readKoreanWord2() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.korean2').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-  },
-      readKoreanWord3() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.korean3').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-  },
-    readKoreanWord4() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.korean4').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-  },
-    readKoreanWord5() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.korean5').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-  },
-    readKoreanWord6() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.korean6').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-  },
-    readKoreanWord7() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.korean7').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-    },
-    readKoreanWord8() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.korean8').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-    },
-    readKoreanWord9() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.korean9').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-      },
-    readKoreanWord10() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.korean10').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-  },
-    readKoreanWord11() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.korean11').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-    },
-    readKoreanVowel1() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.vowel1').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-  },
-    readKoreanVowel2() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.vowel2').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-    },
-    readKoreanVowel3() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.vowel3').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-    },
-    readKoreanVowel4() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.vowel4').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-    },
-    readKoreanVowel5() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.vowel5').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-    },
-    readKoreanVowel6() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.vowel6').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-    },
-    readKoreanVowel7() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.vowel7').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-    },
-    readKoreanVowel8() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.vowel8').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-    },
-    readKoreanVowel9() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.vowel9').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-    },
-    readKoreanVowel10() {
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = document.querySelector('.vowel10').textContent;
-    msg.lang = 'ko-KR';
-    window.speechSynthesis.speak(msg);
-    },
-
-    
-  
+    //write the method for readAloud() speechSynthesis.speak(utterance) in korean the word that is passed as
+    readAloud(word) {
+      let msg = new SpeechSynthesisUtterance();
+      msg.text = word;
+      msg.lang = 'ko-KR';
+      speechSynthesis.speak(msg);
+    }
   }
 //make a button to read aloud text to speech korean word
 
@@ -439,6 +268,15 @@ caption {
   font-weight: bold;
 }
 .read-button{
+  background-color: #9dc9c1;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.read{
   background-color: #9dc9c1;
   color: white;
   border-radius: 5px;
