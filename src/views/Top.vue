@@ -15,7 +15,7 @@
     </nav>
     <main>
       <h1>{{ title }}</h1>
-      <button @click="changeTitle">Korean Lessons</button>
+      <button @click="changeTitle"><h1>Korean Lessons</h1></button>
       <router-view></router-view>
       <container>
       <card-component class="card">
@@ -36,12 +36,44 @@
               <div class="pronunciation">[o][ee]</div>
             </div>
           </div>
-           <div class="word">
+          <div class="word">
             <div class="english">child</div>
             <div class="korean korean3">아이</div>
             <div class="hear">
               <button class="read-button" @click="readKoreanWord3">Speak</button>
               <div class="pronunciation">[ah][ee]</div>
+            </div>
+          </div>
+          <div class="word">
+            <div class="english">reason</div>
+            <div class="korean korean4">이유</div>
+            <div class="hear">
+              <button class="read-button" @click="readKoreanWord4">Speak</button>
+              <div class="pronunciation">[ee][yoo]</div>
+            </div>
+          </div>
+            <div class="word">
+            <div class="english">milk</div>
+            <div class="korean korean5">우유</div>
+            <div class="hear">
+              <button class="read-button" @click="readKoreanWord5">Speak</button>
+              <div class="pronunciation">[oo][yoo]</div>
+            </div>
+          </div>
+            <div class="word">
+            <div class="english">fox</div>
+            <div class="korean korean6">여우</div>
+            <div class="hear">
+              <button class="read-button" @click="readKoreanWord6">Speak</button>
+              <div class="pronunciation">[yuh][oo]</div>
+            </div>
+          </div>
+            <div class="word">
+            <div class="english">yo-yo</div>
+            <div class="korean korean7">요요</div>
+            <div class="hear">
+              <button class="read-button" @click="readKoreanWord7">Speak</button>
+              <div class="pronunciation">[yo][yo]</div>
             </div>
           </div>
 
@@ -69,8 +101,9 @@ export default {
   data() {
     return {
     items: [
-      { id: "tooth", text: "오이" },
+      { id: "tooth", text: "이" },
       { id: "cucumber", text: "오이" },
+      { id: "child", text: "오이" },
       { id: "fox", text: "오이" }
     ]
   }
@@ -94,6 +127,30 @@ export default {
       readKoreanWord3() {
     var msg = new SpeechSynthesisUtterance();
     msg.text = document.querySelector('.korean3').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+  },
+    readKoreanWord4() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.korean4').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+   },
+    readKoreanWord5() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.korean5').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+  },
+    readKoreanWord6() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.korean6').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+  },
+    readKoreanWord7() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.korean7').textContent;
     msg.lang = 'ko-KR';
     window.speechSynthesis.speak(msg);
   }
