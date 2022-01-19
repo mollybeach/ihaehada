@@ -22,28 +22,36 @@
         <h1 slot="header">Wednesday January 12th 2022</h1>
           <div class="word">
             <div class="english">tooth</div>
-            <div class="korean">오이</div>
+            <div class="korean korean1">이</div>
             <div class="hear">
-            <button class="read-button" @click="readKoreanWord">Speak</button>
-            <div class="pronunciation">[ee]</div>
+              <button class="read-button" @click="readKoreanWord1">Speak</button>
+              <div class="pronunciation">[ee]</div>
             </div>
           </div>
           <div class="word">
             <div class="english">cucumber</div>
-            <div class="korean">오이</div>
+            <div class="korean korean2">오이</div>
             <div class="hear">
-            <button class="read-button" @click="readKoreanWord">Speak</button>
-            <div class="pronunciation">[o][ee]</div>
+              <button class="read-button" @click="readKoreanWord2">Speak</button>
+              <div class="pronunciation">[o][ee]</div>
             </div>
           </div>
+           <div class="word">
+            <div class="english">child</div>
+            <div class="korean korean3">아이</div>
+            <div class="hear">
+              <button class="read-button" @click="readKoreanWord3">Speak</button>
+              <div class="pronunciation">[ah][ee]</div>
+            </div>
+          </div>
+
+
       </card-component>
         <card-component class="card">
         <h1 slot="header">Wednesday January 19th 2022</h1>
-        <p slot="body">Body</p>
       </card-component>
         <card-component class="card">
         <h1 slot="header">Wednesday January 29th 2022</h1>
-        <p slot="body">Body</p>
       </card-component>
 </container>
     </main>
@@ -71,17 +79,25 @@ export default {
     changeTitle() {
       this.title = 'Goodbye'
     },
-    readKoreanWord() {
+    readKoreanWord1() {
     var msg = new SpeechSynthesisUtterance();
-    //msg.text = '이';
-    //copilot define msg.text as the value of the div class=korean
-    //make the msg.text as the value of the div class=korean
-    msg.text = document.querySelector('.korean').textContent;
-
-
+    msg.text = document.querySelector('.korean1').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+  },
+    readKoreanWord2() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.korean2').textContent;
+    msg.lang = 'ko-KR';
+    window.speechSynthesis.speak(msg);
+  },
+      readKoreanWord3() {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector('.korean3').textContent;
     msg.lang = 'ko-KR';
     window.speechSynthesis.speak(msg);
   }
+  
   }
 //make a button to read aloud text to speech korean word
 
