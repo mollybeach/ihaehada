@@ -1,7 +1,7 @@
 ## Purpose
 #ihaehada 
 #korean lessons website
-https://ihaehada.web.app/
+https://ihaehada.firebaseapp.com/
 This is a start-up kit for a Firebase web project, which uses Vue.js.
 
 There is also a start-up kit using Vue3
