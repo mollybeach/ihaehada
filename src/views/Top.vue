@@ -3,8 +3,7 @@
   <body>
     <nav>
       <ul>
-        <li><router-link to="/"></router-link></li>
-
+        <li><router-link to="/"></router-link></li> 
       </ul>
     </nav>
     <main>
@@ -12,9 +11,18 @@
       <div class="div-top">
       <router-view></router-view>
       <card-component class="top-card">
-      <h1 slot="header">Korean Lessons</h1>
+      <h1 slot="header">Korean Lessons
+        <button slot="button" class="read-button">
+        <img src="https://icons.veryicon.com/png/o/miscellaneous/vue3-ebook/speak-5.png" alt="korean flag" style="height: 30px; font-size:0.5rem">
+      </button>
+
+      </h1>
+      <!--write a button tag that includes a image within the button -->
+      
+
+     <!-- <button class="read-button korean"><img ></img></button>-->
       <div class="word">
-      <div  v-for="item in items.slice(0,4)" :key=item.id > 
+      <div  v-for="item in items.slice(0,3)" :key=item.id > 
       <div class="english">{{item.id}}</div>
       <div class="hear" v-for="value in item.values" :key=value.values v-on:click="readAloud(value.korean)">
           <button class="read-button korean">{{value.korean}}</button>
@@ -44,7 +52,7 @@
 <card-component class="card">
       <h1 slot="header">Wednesday January 12th 2022</h1>
       <div class="word">
-      <div  v-for="item in items.slice(4,11)" :key=item.id > 
+      <div  v-for="item in items.slice(3,11)" :key=item.id > 
       <div class="english">{{item.id}}</div>
       <div class="hear" v-for="value in item.values" :key=value.values v-on:click="readAloud(value.korean)">
           <button class="read-button korean">{{value.korean}}</button>
@@ -75,11 +83,6 @@ export default {
                                   romance: "ahn-nyeong-ha-se-yo?"
                               }] 
             },
-      { id: "I", values: [{  
-                                  korean: "저는",
-                                  romance: "jeo-neun"
-                                  }]
-            },
       { id: "to be; is; I am", values: [{  
                                   korean: "저는말리입니다",
                                   romance: "jeo-neun(molly)imnida"
@@ -92,7 +95,7 @@ export default {
       //day 1
       { id: "tooth", values: [{  
                                   korean: "이",
-                                  romance: "an-nyeong-ha-se-yo?"
+                                  romance: "ee"
                               }] 
             },
       { id: "cucumber", values: [{  
@@ -106,7 +109,7 @@ export default {
                               }] 
             },
       { id: "reason", values: [{  korean: "이유",
-                                  romance: "ee-yuh"
+                                  romance: "ee-yoo"
                               }] 
             },
       { id: "milk", values: [{  
@@ -116,7 +119,7 @@ export default {
             },
       { id: "fox", values: [{  
                                   korean: "여우",
-                                  romance: "yuh-oh"
+                                  romance: "yuh-ooh"
                             }] 
             },
       { id: "yo-yo", values: [{  
@@ -125,6 +128,42 @@ export default {
                               }] 
             },
       //day2
+            { id: "teacher", values: [{  
+                                  korean: "선생님",
+                                  romance: "seon-saeong-nim?"
+                              }] 
+            },
+            //teacher, yes , in peace, please stay, please go, next week
+            { id: "yes", values : [{
+                                  korean: "네",
+                                  romance: "ne"
+                            }]
+            },
+            { id: "in peace", values : [{
+                                  korean: "평화로운",
+                                  romance: "pyun-ha-ro-neun"
+                            }]
+            },
+            { id: "please stay", values : [{
+                                  korean: "잠시만요",
+                                  romance: "jim-sim"
+                            }]
+            },
+            { id: "please go", values : [{
+                                  korean: "잠시만요",
+                                  romance: "jim-sim"
+                            }]
+            },
+            { id: "next week", values : [{
+                                  korean: "다음주",
+                                  romance: "da-eum-ju-e"
+                            }]
+            },
+                        { id: "again", values : [{
+                                  korean: "ㅇ",
+                                  romance: "Do Do"
+                            }]
+            }
       
 
     ],
@@ -209,6 +248,7 @@ card-component {
   width: 80%;
   border-radius: 2rem;
   box-shadow: 0 8px 96px pink;
+  padding: 20px 0px 20px 0px;
 
 }
 
@@ -274,8 +314,15 @@ caption {
   padding: 10px;
   margin: 10px;
   font-weight: bold;
-  font-size: 1.5em;
+  border: 2px solid #73bbae;
 }
+.read-button:hover{
+  background-color: #c6a0be;
+  border-radius: 10px;
+
+}
+
+
 .read{
   background-color: #9dc9c1;
   color: white;
@@ -284,6 +331,7 @@ caption {
   margin: 10px;
   font-weight: bold;
   font-size: 1.5em;
+  
 }
 * {
   font-family: sans-serif; /* Change your font family */
