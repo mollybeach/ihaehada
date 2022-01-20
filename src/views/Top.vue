@@ -13,7 +13,7 @@
       <card-component class="top-card">
       <h1 slot="header">Korean Lessons
         <button slot="button" class="read-button">
-        <img src="https://icons.veryicon.com/png/o/miscellaneous/vue3-ebook/speak-5.png" alt="korean flag" style="height: 30px; font-size:0.5rem">
+        <img src="https://icons.veryicon.com/png/o/miscellaneous/vue3-ebook/speak-5.png" alt="speak-icon" style="height: 30px; font-size:0.5rem">
       </button>
       </h1>
       <div class="word">
