@@ -15,12 +15,7 @@
         <button slot="button" class="read-button">
         <img src="https://icons.veryicon.com/png/o/miscellaneous/vue3-ebook/speak-5.png" alt="korean flag" style="height: 30px; font-size:0.5rem">
       </button>
-
       </h1>
-      <!--write a button tag that includes a image within the button -->
-      
-
-     <!-- <button class="read-button korean"><img ></img></button>-->
       <div class="word">
       <div  v-for="item in items.slice(0,3)" :key=item.id > 
       <div class="english">{{item.id}}</div>
@@ -32,7 +27,6 @@
       </div>
       </card-component>
       </div>
-      <!-- write a component where onclick of the button with the class="read" it will read the id value for that button aloud by calling the function readAloud() and passes the id to that function in the scripts-->
       <container>
 
 <table class="content-table">
