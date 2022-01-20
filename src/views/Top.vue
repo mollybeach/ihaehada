@@ -179,7 +179,6 @@ export default {
     changeTitle() {
       this.title = 'Goodbye'
     },
-    //write the method for readAloud() speechSynthesis.speak(utterance) in korean the word that is passed as
     readAloud(word) {
       let msg = new SpeechSynthesisUtterance();
       msg.text = word;
@@ -187,8 +186,6 @@ export default {
       speechSynthesis.speak(msg);
     }
   }
-//make a button to read aloud text to speech korean word
-
 }
 </script>
 
@@ -369,5 +366,4 @@ caption {
   font-weight: bold;
   color: #c6a0be;
 }
-
 </style>
