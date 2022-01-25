@@ -17,9 +17,9 @@
       </button>
       </h1>
       <div class="word">
-      <div  v-for="item in items.slice(0,3)" :key=item.id > 
-      <div class="english">{{item.id}}</div>
-      <div class="hear" v-for="value in item.values" :key=value.values v-on:click="readAloud(value.korean)">
+      <div  v-for="phrase in phrases.slice(0,9)" :key=phrase.id > 
+      <div class="english">{{phrase.id}}</div>
+      <div class="hear" v-for="value in phrase.values" :key=value.values v-on:click="readAloud(value.korean)">
           <button class="read-button korean">{{value.korean}}</button>
           <div class="pronunciation">{{value.romance}}</div>
           </div>
@@ -37,16 +37,16 @@
           <th>Korean</th>
     </tr>
   </thead>
-   <tr class="active-row" >
-     <tr  class="active-row" v-for="vowel in vowels" :key=vowel.id  > 
-       <td class="pronunciation">{{vowel.id}}</td>
+  <tr class="active-row" >
+    <tr  class="active-row" v-for="vowel in vowels" :key=vowel.id  > 
+      <td class="pronunciation">{{vowel.id}}</td>
         <td  ><button class="read-button korean" v-on:click="readAloud(vowel.text)" >{{vowel.text}}</button></td>
-     </tr>
+    </tr>
 </table>
 <card-component class="card">
       <h1 slot="header">Wednesday January 12th 2022</h1>
       <div class="word">
-      <div  v-for="item in items.slice(3,11)" :key=item.id > 
+      <div  v-for="item in items.slice(0,7)" :key=item.id > 
       <div class="english">{{item.id}}</div>
       <div class="hear" v-for="value in item.values" :key=value.values v-on:click="readAloud(value.korean)">
           <button class="read-button korean">{{value.korean}}</button>
@@ -57,9 +57,23 @@
       </card-component>
         <card-component class="card">
         <h1 slot="header">Wednesday January 19th 2022</h1>
+              <div class="word">
+      <div  v-for="item in items.slice(7,20)" :key=item.id > 
+      <div class="english">{{item.id}}</div>
+      <div class="hear" v-for="value in item.values" :key=value.values v-on:click="readAloud(value.korean)">
+          <button class="read-button korean">{{value.korean}}</button>
+          <div class="pronunciation">{{value.romance}}</div>
+          </div>
+        </div>
+      </div>
       </card-component>
         <card-component class="card">
         <h1 slot="header">Wednesday January 25th 2022</h1>
+                <div v-if="isMobile()">
+                  <button v-tap.stop="refresh">
+                    refresh
+                  </button>
+                </div>
       </card-component>
 </container>
     </main>
@@ -68,10 +82,11 @@
 
 <script>
 export default {
+
   data() {
     return {
-    items: [
-      //greetings
+      phrases: [
+      //week1 : hello, to be, nice to meet you
       { id: "hello", values: [{  
                                   korean: "안녕하세요",
                                   romance: "ahn-nyeong-ha-se-yo?"
@@ -86,7 +101,49 @@ export default {
                                   romance: "ban-gap-seum-nida"
                               }] 
             },
-      //day 1
+      //week2 : teacher (seon-saeng-nim), yes(ne), in peace (an-nyeong-hi), please(stay) (gye-se-yo), please go (ga-se-yo), next week (da-euym-ju-e), to meet (man-na-yo), again (do do)
+      { id: "teacher", values: [{  
+                                  korean: "선생님",
+                                  romance: "seon-saeong-nim"
+                              }] 
+    },
+    { id: "yes", values : [{
+                                  korean: "네",
+                                  romance: "ne"
+                            }]
+    },
+    {id: "in peace", values: [{  
+                                  korean: "안녕하",
+                                  romance: "ahn-nyeong-ha"
+                              }]
+    },
+    { id: "stay", values: [{  
+                                  korean: "ㄱㅕㅣㄱㅔㅣ",
+                                  romance: "gye-se-yo"
+                              }]
+    },
+    { id: "go", values: [{  
+                                  korean: "가",
+                                  romance: "ga-se-yo"
+                              }]
+    },
+    { id: "next week", values: [{  
+                                  korean: "다음주어ㅣ",
+                                  romance: "da-euym-ju-e"
+                              }]
+    },
+    { id: "to meet", values: [{  
+                                  korean: "만나요",
+                                  romance: "man-na-yo"
+    }]
+    },
+
+
+
+      
+    ],
+    items: [
+      //week 1 : tooth, cucumber, child, reason, milk, fox, yo-yo
       { id: "tooth", values: [{  
                                   korean: "이",
                                   romance: "ee"
@@ -121,44 +178,85 @@ export default {
                                   romance: "yo-yo"
                               }] 
             },
-      //week2
-            { id: "teacher", values: [{  
-                                  korean: "선생님",
-                                  romance: "seon-saeong-nim?"
-                              }] 
-            },
-            //teacher, yes , in peace, please stay, please go, next week
-            { id: "yes", values : [{
-                                  korean: "네",
-                                  romance: "ne"
-                            }]
-            },
-            { id: "in peace", values : [{
-                                  korean: "평화로운",
-                                  romance: "pyun-ha-ro-neun"
-                            }]
-            },
-            { id: "please stay", values : [{
-                                  korean: "잠시만요",
-                                  romance: "jim-sim"
-                            }]
-            },
-            { id: "please go", values : [{
-                                  korean: "잠시만요",
-                                  romance: "jim-sim"
-                            }]
-            },
-            { id: "next week", values : [{
-                                  korean: "다음주",
-                                  romance: "da-eum-ju-e"
-                            }]
-            },
-                        { id: "again", values : [{
-                                  korean: "ㅇ",
-                                  romance: "Do Do"
-                            }]
-            }
+      //week2 : tree, too(much), duck, us/we, country, no, elder sister(male speaker), mother, to buy, to drink, afternoon, one, maybe, head
+      {id : "tree", values:[{
+                                korean:"나무",
+                                romance:"nah-mooh"
+                            }],
       
+      },
+      {id : "too(much)", values:[{
+                                korean:"너무",
+                                romance:"neun-mooh"
+                            }],
+      
+      },
+      {id : "duck", values:[{
+                                korean:"오리",
+                                romance:"oh-ree"
+                            }],
+      
+      },
+      {id : "us/we", values:[{
+                                korean:"우리",
+                                romance:"ooh-ree"
+                            }],
+      
+      },
+      {id : "country", values:[{
+                                korean:"너리",
+                                romance:"nah-rah"
+                            }],
+      
+      },
+      {id : "no", values:[{
+                                korean:"아니오",
+                                romance:"ah-nee-oh"
+                            }],
+      
+      },
+      {id : "elder sister", values:[{
+                                korean:"누니",
+                                romance:"nooh-nah"
+                            }],
+      
+      },
+      {id : "mother", values:[{
+                                korean:"어머니",
+                                romance:"uh-mah-nee"
+                            }],
+      
+      },
+      {id : "to buy", values:[{
+                                korean:"사요",
+                                romance:"sah-gih"
+                            }],
+      },
+      {id : "to drink", values:[{
+                                korean:"마ㅈㅕ요",
+                                romance:"mah-sih-oh"
+                            }],
+      },
+      {id : "afternoon", values:[{
+                                korean:"오후",
+                                romance:"oh-hooh"
+                            }],
+      },
+      {id : "one", values:[{
+                                korean:"하나",
+                                romance:"hah-nah"
+                            }],
+      },
+      {id : "maybe", values:[{
+                                korean:"아마",
+                                romance:"ah-mah"
+                            }],
+      },
+      {id : "head", values:[{
+                                korean:"머리",
+                                romance:"muh-ree"
+                            }],
+      },
 
     ],
     vowels: [
@@ -176,13 +274,56 @@ export default {
     consonants :[
       {id: "g", text:"ㄱ"},
       {id: "n", text: "ㄴ"},
-      
+      {id: "d", text: "ㄷ"},
+      {id: "r", text: "ㄹ"},
+      {id: "m", text: "ㅁ"},
+      {id: "b", text: "ㅂ"},
+      {id: "s", text: "ㅅ"},
+      {id: "ng", text: "ㅇ"},
+      {id: "c", text: "ㅈ"},
+      {id: "ch", text: "ㅊ"},
+      {id: "k", text: "ㅋ"},
+      {id: "t", text: "ㅌ"},
+      {id: "p", text: "ㅍ"},
+      {id: "h", text: "ㅎ"}
+  ],
+  double_consonants:[
+    {id: "gg", text: "ㄲ"},
+    {id: "dd", text: "ㄸ"},
+    {id: "tt", text: "ㄳ"},
+    {id: "pp", text: "ㅃ"},
+    {id: "ss", text: "ㅆ"},
+    {id: "jj", text: "ㅉ"},
+    {id: "bb", text: "ㅍ"},
+    {id: "gg", text: "ㅃ"},
+  ],
+  compound_vowels:[
+    {id:"ae", text:"ㅐ"},
+    {id:"yae", text:"ㅒ"},
+    {id:"e", text:"ㅔ"},
+    {id:"ye", text:"ㅖ"},
+    {id:"wa", text:"ㅘ"},
+    {id:"we", text:"ㅚ"},
+    {id:"wae", text:"ㅙ"},
+    {id:"wuh:", text:"ㅝ"},
+    {id:"wi", text:"ㅞ"},
+    {id:"we", text:"ㅟㅣ"},
+    {id:"eui", text:"ㅢ"},
 
-
-    ]
+  ]
   }
   },
   methods: {
+    isMobile() {
+      //return true;
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+    },
+    //write a method to refresh the page
+    refresh(){
+      location.reload();
+    },
     changeTitle() {
       this.title = 'Goodbye'
     },
