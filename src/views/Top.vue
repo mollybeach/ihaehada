@@ -51,6 +51,7 @@
       <div class="hear" v-for="value in item.values" :key=value.values v-on:click="readAloud(value.korean)">
           <button class="read-button korean">{{value.korean}}</button>
           <div class="pronunciation">{{value.romance}}</div>
+          
           </div>
         </div>
       </div>
@@ -66,14 +67,19 @@
           </div>
         </div>
       </div>
+
+                  <button class="read-button korean" @touchstart="readAloud(example)">
+                    example tap
+                  </button>
       </card-component>
         <card-component class="card">
         <h1 slot="header">Wednesday January 25th 2022</h1>
-                <div v-if="isMobile()">
-                  <button v-tap.stop="refresh">
-                    refresh
-                  </button>
-                </div>
+   <!-- use vue touch tap event to trigger the readAloud function -->
+ <!-- how to use vue tap event how to trigger the readAloud function -->
+ <!-- v-on:tap="readAloud(value.korean)" -->
+      
+
+      
       </card-component>
 </container>
     </main>
@@ -85,6 +91,7 @@ export default {
 
   data() {
     return {
+      example : '만나요',
       phrases: [
       //week1 : hello, to be, nice to meet you
       { id: "hello", values: [{  
@@ -315,10 +322,10 @@ export default {
   },
   methods: {
     isMobile() {
-      //return true;
-      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      return true;
+     /* return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
-      );
+      );*/
     },
     //write a method to refresh the page
     refresh(){
@@ -332,7 +339,10 @@ export default {
       msg.text = word;
       msg.lang = 'ko-KR';
       speechSynthesis.speak(msg);
-    }
+    },
+      tapApp(input){ //It will not trigger when button was clicked.
+            console.log(input);
+        }
   }
 }
 </script>

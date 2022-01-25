@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Tap from 'vue-mobile-tap'
+
 import '@/plugins/vuetify'
 import App from '@/components/App'
 import router from '@/router'
