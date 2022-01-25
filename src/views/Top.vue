@@ -121,7 +121,7 @@ export default {
                                   romance: "yo-yo"
                               }] 
             },
-      //day2
+      //week2
             { id: "teacher", values: [{  
                                   korean: "선생님",
                                   romance: "seon-saeong-nim?"
@@ -172,7 +172,14 @@ export default {
       { id: "yoo", text: "ㅠ" },
       { id: "eu", text: "ㅡ" },
       { id: "ee", text: "ㅣ" }
-    ]  
+    ],
+    consonants :[
+      {id: "g", text:"ㄱ"},
+      {id: "n", text: "ㄴ"},
+      
+
+
+    ]
   }
   },
   methods: {
