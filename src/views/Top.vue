@@ -36,7 +36,10 @@
               <button class="read-button korean" v-on:click="readAloud(vowel.text)"> {{vowel.text}}</button>
             </td>
           </tr>
+          
         </table>
+      </div>
+       
         <div class="card">
           <h1 slot="header">Wednesday January 12th 2022</h1>
           <div class="word">
@@ -48,7 +51,8 @@
               </div>
             </div>
           </div>
-        </div>
+     
+      
         <div class="card">
           <h1 slot="header">Wednesday January 19th 2022</h1>
           <div class="word">
@@ -61,7 +65,9 @@
             </div>
           </div>
         </div>
-      </div>
+      
+        
+       </div>
     </main>
   </body>
 </template>
@@ -72,7 +78,6 @@ export default {
 
   data() {
     return {
-      example : '만나요',
       phrases: [
       //week1 : hello, to be, nice to meet you
       { id: "hello", values: [{  
@@ -123,49 +128,44 @@ export default {
     { id: "to meet", values: [{  
                                   korean: "만나요",
                                   romance: "man-na-yo"
-    }]
-    },
-
-
-
-      
-    ],
+                              }]
+    }],
     items: [
       //week 1 : tooth, cucumber, child, reason, milk, fox, yo-yo
       { id: "tooth", values: [{  
                                   korean: "이",
                                   romance: "ee"
                               }] 
-            },
+      },
       { id: "cucumber", values: [{  
                                   korean: "오이",
                                   romance: "oh-ee"
                                   }]
-            },
+      },
       { id: "child", values: [{  
                                   korean: "아이",
                                   romance: "ah-ee"
                               }] 
-            },
+      },
       { id: "reason", values: [{  korean: "이유",
                                   romance: "ee-yoo"
                               }] 
-            },
+      },
       { id: "milk", values: [{  
                                   korean: "우유",
                                   romance: "oh-yoo"
                               }]
-            },
+      },
       { id: "fox", values: [{  
                                   korean: "여우",
                                   romance: "yuh-ooh"
                             }] 
-            },
+      },
       { id: "yo-yo", values: [{  
                                   korean: "요요",
                                   romance: "yo-yo"
                               }] 
-            },
+      },
       //week2 : tree, too(much), duck, us/we, country, no, elder sister(male speaker), mother, to buy, to drink, afternoon, one, maybe, head
       {id : "tree", values:[{
                                 korean:"나무",
@@ -297,14 +297,12 @@ export default {
     {id:"wi", text:"ㅞ"},
     {id:"we", text:"ㅟㅣ"},
     {id:"eui", text:"ㅢ"},
-
   ]
-  }
-  },
+  }},
   methods: {
     isMobile() {
       return true;
-     /* return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      /* return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
       );*/
     },
@@ -312,18 +310,14 @@ export default {
     refresh(){
       location.reload();
     },
-   /* changeTitle() {
-      this.title = 'Goodbye'
-    },*/
     readAloud(word) {
       let msg = new SpeechSynthesisUtterance();
       msg.text = word;
       msg.lang = 'ko-KR';
+      console.log(msg);
       speechSynthesis.speak(msg);
-    },
-      tapApp(input){ //It will not trigger when button was clicked.
-            console.log(input);
-        }
+    }
+    
   }
 }
 </script>
