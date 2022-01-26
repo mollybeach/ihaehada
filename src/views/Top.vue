@@ -1,90 +1,71 @@
-
 <template>
   <body>
-    <nav>
-      <ul>
-        <li><router-link to="/"></router-link></li> 
-      </ul>
-    </nav>
     <main>
-     <!-- <h1>{{ title }}</h1>-->
       <div class="div-top">
-      <router-view></router-view>
-      <div class="top-card">
-      <h1 slot="header">Korean Lessons
-        <button slot="button" class="read-button">
-        <img src="https://icons.veryicon.com/png/o/miscellaneous/vue3-ebook/speak-5.png" alt="speak-icon" style="height: 30px; font-size:0.5rem">
-      </button>
-      </h1>
-      <div class="word">
-      <div  v-for="phrase in phrases.slice(0,9)" :key=phrase.id > 
-      <div class="english">{{phrase.id}}</div>
-      <div class="hear" v-for="value in phrase.values" :key=value.values v-on:click="readAloud(value.korean)">
-          <button class="read-button korean">{{value.korean}}</button>
-          <div class="pronunciation">{{value.romance}}</div>
+        <div class="top-card">
+          <h1 slot="header">
+            Korean Lessons
+            <button slot="button" class="read-button">
+              <img src="https://icons.veryicon.com/png/o/miscellaneous/vue3-ebook/speak-5.png" alt="speak-icon" style="height: 30px; font-size: 0.5rem" />
+            </button>
+          </h1>
+          <div class="word">
+            <div v-for="phrase in phrases.slice(0,9)" :key="phrase.id">
+              <div class="english">{{phrase.id}}</div>
+              <div class="hear" v-for="value in phrase.values" :key="value.values" v-on:click="readAloud(value.korean)">
+                <button class="read-button korean">{{value.korean}}</button>
+                <div class="pronunciation">{{value.romance}}</div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      </div>
       </div>
       <div class="container">
-
-<table class="content-table">
-  <caption>Vowels</caption>
-  <thead>
-    <tr>
-          <th>Romanized </th>
-          <th>Korean</th>
-    </tr>
-  </thead>
-  <tr class="active-row" >
-    <tr  class="active-row" v-for="vowel in vowels" :key=vowel.id  > 
-      <td class="pronunciation">{{vowel.id}}</td>
-        <td  ><button class="read-button korean" v-on:click="readAloud(vowel.text)" >{{vowel.text}}</button></td>
-    </tr>
-</table>
-<div class="card">
-      <h1 slot="header">Wednesday January 12th 2022</h1>
-      <div class="word">
-      <div  v-for="item in items.slice(0,7)" :key=item.id > 
-      <div class="english">{{item.id}}</div>
-      <div class="hear" v-for="value in item.values" :key=value.values v-on:click="readAloud(value.korean)">
-          <button class="read-button korean">{{value.korean}}</button>
-          <div class="pronunciation">{{value.romance}}</div>
-          
+        <table class="content-table">
+          <caption> Vowels</caption>
+          <thead>
+            <tr>
+              <th>Romanized</th>
+              <th>Korean</th>
+            </tr>
+          </thead>
+          <tr class="active-row"></tr>
+          <tr class="active-row" v-for="vowel in vowels" :key="vowel.id">
+            <td class="pronunciation">{{vowel.id}}</td>
+            <td>
+              <button class="read-button korean" v-on:click="readAloud(vowel.text)"> {{vowel.text}}</button>
+            </td>
+          </tr>
+        </table>
+        <div class="card">
+          <h1 slot="header">Wednesday January 12th 2022</h1>
+          <div class="word">
+            <div v-for="item in items.slice(0,7)" :key="item.id">
+              <div class="english">{{item.id}}</div>
+              <div class="hear" v-for="value in item.values" :key="value.values" v-on:click="readAloud(value.korean)">
+                <button class="read-button korean">{{value.korean}}</button>
+                <div class="pronunciation">{{value.romance}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h1 slot="header">Wednesday January 19th 2022</h1>
+          <div class="word">
+            <div v-for="item in items.slice(7,20)" :key="item.id">
+              <div class="english">{{item.id}}</div>
+              <div class="hear" v-for="value in item.values" :key="value.values" v-on:click="readAloud(value.korean)">
+                <button class="read-button korean">{{value.korean}}</button>
+                <div class="pronunciation">{{value.romance}}</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-        <div class="card">
-        <h1 slot="header">Wednesday January 19th 2022</h1>
-              <div class="word">
-      <div  v-for="item in items.slice(7,20)" :key=item.id > 
-      <div class="english">{{item.id}}</div>
-      <div class="hear" v-for="value in item.values" :key=value.values v-on:click="readAloud(value.korean)">
-          <button class="read-button korean">{{value.korean}}</button>
-          <div class="pronunciation">{{value.romance}}</div>
-          </div>
-        </div>
-      </div>
-
-                <!-- <button class="read-button korean" @touchstart="readAloud(example)">
-                    example tap event
-                  </button>-->
-      </div>
-        <div class="card">
-        <h1 slot="header">Wednesday January 25th 2022</h1>
-   <!-- use vue touch tap event to trigger the readAloud function -->
- <!-- how to use vue tap event how to trigger the readAloud function -->
- <!-- v-on:tap="readAloud(value.korean)" -->
-      
-
-      
-      </div>
-</div>
     </main>
-    </body>
+  </body>
 </template>
+
 
 <script>
 export default {
