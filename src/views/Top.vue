@@ -39,7 +39,6 @@
           
         </table>
       </div>
-       
         <div class="card">
           <h1 slot="header">Wednesday January 12th 2022</h1>
           <div class="word">
@@ -56,7 +55,7 @@
         <div class="card">
           <h1 slot="header">Wednesday January 19th 2022</h1>
           <div class="word">
-            <div v-for="item in items.slice(7,20)" :key="item.id">
+            <div v-for="item in items.slice(7,21)" :key="item.id">
               <div class="english">{{item.id}}</div>
               <div class="hear" v-for="value in item.values" :key="value.values" v-on:click="readAloud(value.korean)">
                 <button class="read-button korean">{{value.korean}}</button>
@@ -175,7 +174,7 @@ export default {
       },
       {id : "too(much)", values:[{
                                 korean:"너무",
-                                romance:"neun-mooh"
+                                romance:"nuh-mooh"
                             }],
       
       },
@@ -192,7 +191,7 @@ export default {
       
       },
       {id : "country", values:[{
-                                korean:"너리",
+                                korean:"ㄴㅏ라",
                                 romance:"nah-rah"
                             }],
       
@@ -204,25 +203,25 @@ export default {
       
       },
       {id : "elder sister", values:[{
-                                korean:"누니",
+                                korean:"누나",
                                 romance:"nooh-nah"
                             }],
       
       },
       {id : "mother", values:[{
                                 korean:"어머니",
-                                romance:"uh-mah-nee"
+                                romance:"uh-muh-nee"
                             }],
       
       },
       {id : "to buy", values:[{
                                 korean:"사요",
-                                romance:"sah-gih"
+                                romance:"sah-yoh"
                             }],
       },
       {id : "to drink", values:[{
                                 korean:"마ㅈㅕ요",
-                                romance:"mah-sih-oh"
+                                romance:"mah-syuh-yoh"
                             }],
       },
       {id : "afternoon", values:[{
@@ -244,7 +243,7 @@ export default {
                                 korean:"머리",
                                 romance:"muh-ree"
                             }],
-      },
+      }
 
     ],
     vowels: [
