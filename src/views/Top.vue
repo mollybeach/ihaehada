@@ -7,10 +7,10 @@
       </ul>
     </nav>
     <main>
-      <h1>{{ title }}</h1>
+     <!-- <h1>{{ title }}</h1>-->
       <div class="div-top">
       <router-view></router-view>
-      <card-component class="top-card">
+      <div class="top-card">
       <h1 slot="header">Korean Lessons
         <button slot="button" class="read-button">
         <img src="https://icons.veryicon.com/png/o/miscellaneous/vue3-ebook/speak-5.png" alt="speak-icon" style="height: 30px; font-size:0.5rem">
@@ -25,9 +25,9 @@
           </div>
         </div>
       </div>
-      </card-component>
       </div>
-      <container>
+      </div>
+      <div class="container">
 
 <table class="content-table">
   <caption>Vowels</caption>
@@ -43,7 +43,7 @@
         <td  ><button class="read-button korean" v-on:click="readAloud(vowel.text)" >{{vowel.text}}</button></td>
     </tr>
 </table>
-<card-component class="card">
+<div class="card">
       <h1 slot="header">Wednesday January 12th 2022</h1>
       <div class="word">
       <div  v-for="item in items.slice(0,7)" :key=item.id > 
@@ -55,8 +55,8 @@
           </div>
         </div>
       </div>
-      </card-component>
-        <card-component class="card">
+      </div>
+        <div class="card">
         <h1 slot="header">Wednesday January 19th 2022</h1>
               <div class="word">
       <div  v-for="item in items.slice(7,20)" :key=item.id > 
@@ -68,11 +68,11 @@
         </div>
       </div>
 
-                  <button class="read-button korean" @touchstart="readAloud(example)">
-                    example tap
-                  </button>
-      </card-component>
-        <card-component class="card">
+                <!-- <button class="read-button korean" @touchstart="readAloud(example)">
+                    example tap event
+                  </button>-->
+      </div>
+        <div class="card">
         <h1 slot="header">Wednesday January 25th 2022</h1>
    <!-- use vue touch tap event to trigger the readAloud function -->
  <!-- how to use vue tap event how to trigger the readAloud function -->
@@ -80,8 +80,8 @@
       
 
       
-      </card-component>
-</container>
+      </div>
+</div>
     </main>
     </body>
 </template>
@@ -331,9 +331,9 @@ export default {
     refresh(){
       location.reload();
     },
-    changeTitle() {
+   /* changeTitle() {
       this.title = 'Goodbye'
-    },
+    },*/
     readAloud(word) {
       let msg = new SpeechSynthesisUtterance();
       msg.text = word;
@@ -370,7 +370,7 @@ a router-link {
   color: white;
   text-decoration: none;
 }
-container{
+.container{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -384,7 +384,7 @@ container{
   align-items: center;
   width: 100%;
 }
-card-component {
+div {
   background-color: #f5f5f5;
 
 }
