@@ -50,7 +50,6 @@
               </div>
             </div>
           </div>
-     
       
         <div class="card">
           <h1 slot="header">Wednesday January 19th 2022</h1>
@@ -64,9 +63,22 @@
             </div>
           </div>
         </div>
-      
+
+
+        <div class="card">
+          <h1 slot="header">Wednesday January 19th 2022</h1>
+          <div class="word">
+            <div v-for="item in items.slice(21,35)" :key="item.id">
+              <div class="english">{{item.id}}</div>
+              <div class="hear" v-for="value in item.values" :key="value.values" v-on:click="readAloud(value.korean)">
+                <button class="read-button korean">{{value.korean}}</button>
+                <div class="pronunciation">{{value.romance}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
         
-       </div>
+      </div>
     </main>
   </body>
 </template>
@@ -191,7 +203,7 @@ export default {
       
       },
       {id : "country", values:[{
-                                korean:"ㄴㅏ라",
+                                korean:"나라",
                                 romance:"nah-rah"
                             }],
       
@@ -244,8 +256,81 @@ export default {
                                 romance:"muh-ree"
                             }],
       }
-
+      //week3 : father, shoes, hat, spoon and chopsticks, to be painful , to teach, to wait, train, stamps, grapes, to go, to sleep, to ride, meat: fish
+      ,
+      {id : "father", values:[{
+                                korean:"아버지",
+                                romance:"ah-bah-jee"
+                            }],
+      
+      },
+      {id : "shoes", values:[{
+                                korean:"구두",
+                                romance:"gooh-dooh"
+                            }],
+      },
+      {id : "hat", values:[{
+                                korean:"모자",
+                                romance:"moh-jah"
+                          }],
+      },
+      {id : "spoon and chopsticks", values:[{
+                                korean:"수저",
+                                romance:"sooh-juh"
+                          }],
+      },
+      {id : "to be painful", values:[{
+                                korean:"ㅇㅏ파요",
+                                romance:"gah-pah-yoh"
+                          }],
+      },
+      {id : "to teach", values:[{
+                                korean:"가르치요",
+                                romance:"gah-ree-chee-yoh"
+                          }],
+      },
+      {id : "to wait", values:[{
+                                korean:"기다리요",
+                                romance:"gih-dah-ree-yoh"
+                          }],
+      },
+      {id : "train", values:[{
+                                korean:"가차",
+                                romance:"gah-chah"
+                            }],
+      },
+      {id : "stamps", values:[{
+                                korean:"우퓨",
+                                romance:"ooh-pyooh"
+                            }],
+      },
+      {id : "grapes", values:[{
+                                korean:"포도",
+                                romance:"poh-doh"
+                            }],
+      },
+      {id : "to go", values:[{
+                                korean:"가요",
+                                romance:"gah-yoh"
+                            }],
+      },
+      {id : "to sleep", values:[{
+                                korean:"자요",
+                                romance:"jah-yoh"
+                            }],
+      },
+      {id : "to ride", values:[{
+                                korean:"타요",
+                                romance:"tah-yoh"
+                            }],
+      },
+      {id : "meat: fish", values:[{
+                                korean:"고기",
+                                romance:"gooh-gee"
+                              }],
+      },
     ],
+
     vowels: [
       { id: "ah", text: "ㅏ" },
       { id: "yah", text: "ㅑ" },
@@ -272,7 +357,9 @@ export default {
       {id: "k", text: "ㅋ"},
       {id: "t", text: "ㅌ"},
       {id: "p", text: "ㅍ"},
-      {id: "h", text: "ㅎ"}
+      {id: "h", text: "ㅎ"},
+      {id: "j", text: "ㅈ"},
+      
   ],
   double_consonants:[
     {id: "gg", text: "ㄲ"},
@@ -296,8 +383,8 @@ export default {
     {id:"wi", text:"ㅞ"},
     {id:"we", text:"ㅟㅣ"},
     {id:"eui", text:"ㅢ"},
-  ]
-  }},
+  ]}
+  },
   methods: {
     isMobile() {
       return true;
@@ -315,10 +402,10 @@ export default {
       msg.lang = 'ko-KR';
       console.log(msg);
       speechSynthesis.speak(msg);
-    }
-    
+    },
   }
 }
+      
 </script>
 
 <style>
