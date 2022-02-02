@@ -39,6 +39,25 @@
           
         </table>
       </div>
+            <div class="container">
+        <table class="content-table">
+          <caption> Consonants</caption>
+          <thead>
+            <tr>
+              <th>Romanized</th>
+              <th>Korean</th>
+            </tr>
+          </thead>
+          <tr class="active-row"></tr>
+          <tr class="active-row" v-for="consonant in consonants" :key="consonant.id">
+            <td class="pronunciation">{{consonant.id}}</td>
+            <td>
+              <button class="read-button korean" v-on:click="readAloud(consonant.text)"> {{consonant.text}}</button>
+            </td>
+          </tr>
+          
+        </table>
+      </div>
         <div class="card">
           <h1 slot="header">Wednesday January 12th 2022</h1>
           <div class="word">
@@ -66,7 +85,7 @@
 
 
         <div class="card">
-          <h1 slot="header">Wednesday January 19th 2022</h1>
+          <h1 slot="header">Wednesday January 26th 2022</h1>
           <div class="word">
             <div v-for="item in items.slice(21,35)" :key="item.id">
               <div class="english">{{item.id}}</div>
@@ -77,7 +96,20 @@
             </div>
           </div>
         </div>
-        
+
+        <div class="card">
+          <h1 slot="header">Wednesday Feb 2nd 2022</h1>
+          <div class="word">
+            <div v-for="item in items.slice(35,37)" :key="item.id">
+              <div class="english">{{item.id}}</div>
+              <div class="hear" v-for="value in item.values" :key="value.values" v-on:click="readAloud(value.korean)">
+                <button class="read-button korean">{{value.korean}}</button>
+                <div class="pronunciation">{{value.romance}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </main>
   </body>
@@ -280,18 +312,18 @@ export default {
                           }],
       },
       {id : "to be painful", values:[{
-                                korean:"ㅇㅏ파요",
-                                romance:"gah-pah-yoh"
+                                korean:"아파요",
+                                romance:"ah-pah-yoh"
                           }],
       },
       {id : "to teach", values:[{
                                 korean:"가르치요",
-                                romance:"gah-ree-chee-yoh"
+                                romance:"gah-reu-chyuh-yoh"
                           }],
       },
       {id : "to wait", values:[{
                                 korean:"기다리요",
-                                romance:"gih-dah-ree-yoh"
+                                romance:"gee-dah-ree-yoh"
                           }],
       },
       {id : "train", values:[{
@@ -300,8 +332,8 @@ export default {
                             }],
       },
       {id : "stamps", values:[{
-                                korean:"우퓨",
-                                romance:"ooh-pyooh"
+                                korean:"우표",
+                                romance:"ooh-pyoh"
                             }],
       },
       {id : "grapes", values:[{
@@ -326,9 +358,77 @@ export default {
       },
       {id : "meat: fish", values:[{
                                 korean:"고기",
-                                romance:"gooh-gee"
+                                romance:"goh-gee"
                               }],
       },
+      //week 4: hand, door, money, island, night, sleep, water, firelight , star, work, zero, room, ball
+      {id : "hand", values:[{
+                                korean:"손",
+                                romance:"sohn"
+                            }],
+      },
+      {id : "door", values:[{
+                                korean:"문",
+                                romance:"muhn"
+                            }],
+      },
+      {id : "money", values:[{
+                                korean:"돈",
+                                romance:"dohn"
+                            }],
+      },
+      {id : "island", values:[{
+                                korean:"섬",
+                                romance:"suh-m"
+                            }],
+      },
+      {id : "night", values:[{
+                                korean:"밤",
+                                romance:"bah-m"
+                            }],
+      },
+      {id : "sleep", values:[{
+                                korean:"잠",
+                                romance:"jah-ma"
+                            }],
+      },
+      {id : "water", values:[{
+                                korean:"물",
+                                romance:"mooh-l"
+                            }],
+      },
+      {id : "firelight", values:[{
+                                korean:"불",
+                                romance:"booh-l"
+                            }],
+      },
+      {id : "star", values:[{
+                                korean:"별",
+                                romance:"byah-l"
+                            }],
+      },
+      {id : "work", values:[{
+                                korean:"일",
+                                romance:"ng-ee-l"
+                            }],
+      },
+      {id : "zero", values:[{
+                                korean:"영",
+                                romance:"yuhng"
+                            }],
+      },
+      {id : "room", values:[{
+                                korean:"방",
+                                romance:"bah-ng"
+                            }],
+      },
+      {id : "ball", values:[{
+                                korean:"공",
+                                romance:"goh-ng"
+                            }],
+      },
+      
+
     ],
 
     vowels: [
@@ -352,7 +452,6 @@ export default {
       {id: "b", text: "ㅂ"},
       {id: "s", text: "ㅅ"},
       {id: "ng", text: "ㅇ"},
-      {id: "c", text: "ㅈ"},
       {id: "ch", text: "ㅊ"},
       {id: "k", text: "ㅋ"},
       {id: "t", text: "ㅌ"},
