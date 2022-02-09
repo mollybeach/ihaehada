@@ -443,7 +443,7 @@ export default {
       },
       {id : "star", values:[{
                                 korean:"별",
-                                romance:"byah-l"
+                                romance:"byuh-l"
                             }],
       },
       {id : "work", values:[{
