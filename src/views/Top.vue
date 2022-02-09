@@ -39,7 +39,7 @@
           
         </table>
       </div>
-            <div class="container">
+         <div class="container">
         <table class="content-table">
           <caption> Consonants</caption>
           <thead>
@@ -54,10 +54,49 @@
             <td>
               <button class="read-button korean" v-on:click="readAloud(consonant.text)"> {{consonant.text}}</button>
             </td>
-          </tr>
-          
+          </tr>          
         </table>
       </div>
+
+     <!-- make table for double consonants from the data : double_consonants-->
+    <!--  <div class="container">
+        <table class="content-table">
+          <caption> Double Consonants</caption>
+          <thead>
+            <tr>
+              <th>Romanized</th>
+              <th>Korean</th>
+            </tr>
+          </thead>
+          <tr class="active-row"></tr>
+          <tr class="active-row" v-for="double_consonant in double_consonants" :key="double_consonant.id">
+            <td class="pronunciation">{{double_consonant.id}}</td>
+            <td>
+              <button class="read-button korean" v-on:click="readAloud(double_consonant.text)"> {{double_consonant.text}}</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      make table for compound vowels from the data : compound_vowels
+      <div class="container">
+        <table class="content-table">
+          <caption> Compound Vowels</caption>
+          <thead>
+            <tr>
+              <th>Romanized</th>
+              <th>Korean</th>
+            </tr>
+          </thead>
+          <tr class="active-row"></tr>
+          <tr class="active-row" v-for="compound_vowel in compound_vowels" :key="compound_vowel.id">
+            <td class="pronunciation">{{compound_vowel.id}}</td>
+            <td>
+              <button class="read-button korean" v-on:click="readAloud(compound_vowel.text)"> {{compound_vowel.text}}</button>
+            </td>
+          </tr>
+-->
+
         <div class="card">
           <h1 slot="header">Wednesday January 12th 2022</h1>
           <div class="word">
@@ -100,7 +139,7 @@
         <div class="card">
           <h1 slot="header">Wednesday Feb 2nd 2022</h1>
           <div class="word">
-            <div v-for="item in items.slice(35,37)" :key="item.id">
+            <div v-for="item in items.slice(35,49)" :key="item.id">
               <div class="english">{{item.id}}</div>
               <div class="hear" v-for="value in item.values" :key="value.values" v-on:click="readAloud(value.korean)">
                 <button class="read-button korean">{{value.korean}}</button>
@@ -369,7 +408,7 @@ export default {
       },
       {id : "door", values:[{
                                 korean:"문",
-                                romance:"muhn"
+                                romance:"moohn"
                             }],
       },
       {id : "money", values:[{
@@ -389,7 +428,7 @@ export default {
       },
       {id : "sleep", values:[{
                                 korean:"잠",
-                                romance:"jah-ma"
+                                romance:"jah-m"
                             }],
       },
       {id : "water", values:[{
@@ -471,10 +510,10 @@ export default {
     {id: "gg", text: "ㅃ"},
   ],
   compound_vowels:[
-    {id:"ae", text:"ㅐ"},
-    {id:"yae", text:"ㅒ"},
     {id:"e", text:"ㅔ"},
     {id:"ye", text:"ㅖ"},
+    {id:"ae", text:"ㅐ"},
+    {id:"yae", text:"ㅒ"},
     {id:"wa", text:"ㅘ"},
     {id:"we", text:"ㅚ"},
     {id:"wae", text:"ㅙ"},
@@ -684,4 +723,5 @@ caption {
   font-weight: bold;
   color: #c6a0be;
 }
+
 </style>
