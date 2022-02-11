@@ -39,7 +39,7 @@
           
         </table>
       </div>
-         <div class="container">
+      <div class="container">
         <table class="content-table">
           <caption> Consonants</caption>
           <thead>
@@ -58,8 +58,8 @@
         </table>
       </div>
 
-     <!-- make table for double consonants from the data : double_consonants-->
-    <!--  <div class="container">
+
+<div class="container">
         <table class="content-table">
           <caption> Double Consonants</caption>
           <thead>
@@ -78,7 +78,8 @@
         </table>
       </div>
 
-      make table for compound vowels from the data : compound_vowels
+
+
       <div class="container">
         <table class="content-table">
           <caption> Compound Vowels</caption>
@@ -95,7 +96,8 @@
               <button class="read-button korean" v-on:click="readAloud(compound_vowel.text)"> {{compound_vowel.text}}</button>
             </td>
           </tr>
--->
+                  </table>
+      </div>
 
         <div class="card">
           <h1 slot="header">Wednesday January 12th 2022</h1>
