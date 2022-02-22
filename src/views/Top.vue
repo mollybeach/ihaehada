@@ -141,7 +141,20 @@
         <div class="card">
           <h1 slot="header">Wednesday Feb 2nd 2022</h1>
           <div class="word">
-            <div v-for="item in items.slice(35,49)" :key="item.id">
+            <div v-for="item in items.slice(35,48)" :key="item.id">
+              <div class="english">{{item.id}}</div>
+              <div class="hear" v-for="value in item.values" :key="value.values" v-on:click="readAloud(value.korean)">
+                <button class="read-button korean">{{value.korean}}</button>
+                <div class="pronunciation">{{value.romance}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <div class="card">
+          <h1 slot="header">Wednesday Feb 9th 2022</h1>
+          <div class="word">
+            <div v-for="item in items.slice(48,63)" :key="item.id">
               <div class="english">{{item.id}}</div>
               <div class="hear" v-for="value in item.values" :key="value.values" v-on:click="readAloud(value.korean)">
                 <button class="read-button korean">{{value.korean}}</button>
@@ -468,6 +481,79 @@ export default {
                                 romance:"goh-ng"
                             }],
       },
+      //week 5: axe, rabbit , elder brother, little child, to be salty, to be busy, elephant, korean wrestling, Mr., honey, daughter, bread, rice, steamed
+      {id : "axe", values:[{
+                                korean:"도끼",
+                                romance:"doh-kkee"
+                            }],
+      },
+      {id : "rabbit", values:[{
+                                korean:"토끼",
+                                romance:"toh-kkee"
+                            }],
+      },
+      {id : "elder brother", values:[{
+                                korean:"오빠",
+                                romance:"oh-ppah"
+                            }],
+      },
+      {id : "little child", values:[{
+                                korean:"꼬마",
+                                romance:"kkoh-mah"
+                            }],
+      },
+      {id : "to be salty", values:[{
+                                korean:"짜요",
+                                romance:"jjah-yoh"
+                            }],
+      },
+      {id : "to be busy", values:[{
+                                korean:"바빠요",
+                                romance:"bah-ppah-yoh"
+                            }],
+      },
+      {id : "elephant", values:[{
+                                korean:"코끼리",
+                                romance:"koh-kkee-lee"
+                            }],
+      },
+      {id : "korean wrestling", values:[{
+                                korean:"씨름",
+                                romance:"ssee-leum"
+                            }],
+      },
+      {id : "Mr.", values:[{
+                                korean:"아저씨",
+                                romance:"ah-juh-ssee"
+                            }],
+      },
+      {id : "honey", values:[{
+                                korean:"꿀",
+                                romance:"kk-uh-l"
+                            }],
+      },
+      {id : "daughter", values:[{
+                                korean:"딸",
+                                romance:"tt-ah-l"
+                            }],
+      },
+      {id : "bread", values:[{
+                                korean:"빵",
+                                romance:"pp-ah-ng"
+                            }],
+      },
+      {id : "rice", values:[{
+                                korean:"쌀",
+                                romance:"ss-ah-l"
+                            }],
+      },
+      {id : "steamed", values:[{
+                                korean:"찜",
+                                romance:"jj-ee-m"
+                            }],
+      },
+
+      
       
 
     ],
