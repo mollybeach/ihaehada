@@ -41,7 +41,7 @@
       </div>
       <div class="container">
         <table class="content-table">
-          <caption> Consonants</caption>
+          <caption> Basic Consonants</caption>
           <thead>
             <tr>
               <th>Romanized</th>
@@ -49,19 +49,18 @@
             </tr>
           </thead>
           <tr class="active-row"></tr>
-          <tr class="active-row" v-for="consonant in consonants" :key="consonant.id">
-            <td class="pronunciation">{{consonant.id}}</td>
+          <tr class="active-row" v-for="basic_consonant in basic_consonants" :key="basic_consonant.id">
+            <td class="pronunciation">{{basic_consonant.id}}</td>
             <td>
-              <button class="read-button korean" v-on:click="readAloud(consonant.text)"> {{consonant.text}}</button>
+              <button class="read-button korean" v-on:click="readAloud(basic_consonant.text)"> {{basic_consonant.text}}</button>
             </td>
           </tr>          
         </table>
       </div>
 
-
 <div class="container">
         <table class="content-table">
-          <caption> Double Consonants</caption>
+          <caption> Aspirated Consonants</caption>
           <thead>
             <tr>
               <th>Romanized</th>
@@ -69,10 +68,29 @@
             </tr>
           </thead>
           <tr class="active-row"></tr>
-          <tr class="active-row" v-for="double_consonant in double_consonants" :key="double_consonant.id">
-            <td class="pronunciation">{{double_consonant.id}}</td>
+          <tr class="active-row" v-for="aspirated_consonant in aspirated_consonants" :key="aspirated_consonant.id">
+            <td class="pronunciation">{{aspirated_consonant.id}}</td>
             <td>
-              <button class="read-button korean" v-on:click="readAloud(double_consonant.text)"> {{double_consonant.text}}</button>
+              <button class="read-button korean" v-on:click="readAloud(aspirated_consonant.text)"> {{aspirated_consonant.text}}</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+<div class="container">
+        <table class="content-table">
+          <caption> Tense Consonants</caption>
+          <thead>
+            <tr>
+              <th>Romanized</th>
+              <th>Korean</th>
+            </tr>
+          </thead>
+          <tr class="active-row"></tr>
+          <tr class="active-row" v-for="tense_consonant in tense_consonants" :key="tense_consonant.id">
+            <td class="pronunciation">{{tense_consonant.id}}</td>
+            <td>
+              <button class="read-button korean" v-on:click="readAloud(tense_consonant.text)"> {{tense_consonant.text}}</button>
             </td>
           </tr>
         </table>
@@ -482,6 +500,21 @@ export default {
                             }],
       },
       //week 5: axe, rabbit , elder brother, little child, to be salty, to be busy, elephant, korean wrestling, Mr., honey, daughter, bread, rice, steamed
+      {id : "Mr.", values:[{
+                                korean:"아저씨",
+                                romance:"ah-juh-ssee"
+                            }],
+      },
+      {id : "to be busy", values:[{
+                                korean:"바빠요",
+                                romance:"bah-ppah-yoh"
+                            }],
+      },
+      {id : "bread", values:[{
+                                korean:"빵",
+                                romance:"pp-ah-ng"
+                            }],
+      },
       {id : "axe", values:[{
                                 korean:"도끼",
                                 romance:"doh-kkee"
@@ -492,9 +525,9 @@ export default {
                                 romance:"toh-kkee"
                             }],
       },
-      {id : "elder brother", values:[{
-                                korean:"오빠",
-                                romance:"oh-ppah"
+      {id : "daughter", values:[{
+                                korean:"딸",
+                                romance:"tt-ah-l"
                             }],
       },
       {id : "little child", values:[{
@@ -502,49 +535,20 @@ export default {
                                 romance:"kkoh-mah"
                             }],
       },
-      {id : "to be salty", values:[{
-                                korean:"짜요",
-                                romance:"jjah-yoh"
-                            }],
-      },
-      {id : "to be busy", values:[{
-                                korean:"바빠요",
-                                romance:"bah-ppah-yoh"
-                            }],
-      },
       {id : "elephant", values:[{
                                 korean:"코끼리",
                                 romance:"koh-kkee-lee"
                             }],
       },
-      {id : "korean wrestling", values:[{
-                                korean:"씨름",
-                                romance:"ssee-leum"
-                            }],
-      },
-      {id : "Mr.", values:[{
-                                korean:"아저씨",
-                                romance:"ah-juh-ssee"
-                            }],
-      },
       {id : "honey", values:[{
                                 korean:"꿀",
-                                romance:"kk-uh-l"
+                                romance:"kk-ooh-l"
                             }],
       },
-      {id : "daughter", values:[{
-                                korean:"딸",
-                                romance:"tt-ah-l"
-                            }],
-      },
-      {id : "bread", values:[{
-                                korean:"빵",
-                                romance:"pp-ah-ng"
-                            }],
-      },
-      {id : "rice", values:[{
-                                korean:"쌀",
-                                romance:"ss-ah-l"
+      
+      {id : "to be salty", values:[{
+                                korean:"짜요",
+                                romance:"jjah-yoh"
                             }],
       },
       {id : "steamed", values:[{
@@ -552,9 +556,21 @@ export default {
                                 romance:"jj-ee-m"
                             }],
       },
-
-      
-      
+    {id : "elder brother", values:[{
+                                korean:"오빠",
+                                romance:"oh-ppah"
+                            }],
+      },
+      {id : "korean wrestling", values:[{
+                                korean:"씨름",
+                                romance:"ssee-leum"
+                            }],
+      },
+      {id : "rice", values:[{
+                                korean:"쌀",
+                                romance:"ss-ah-l"
+                            }],
+      }
 
     ],
 
@@ -570,32 +586,34 @@ export default {
       { id: "eu", text: "ㅡ" },
       { id: "ee", text: "ㅣ" }
     ],
-    consonants :[
-      {id: "g", text:"ㄱ"},
-      {id: "n", text: "ㄴ"},
-      {id: "d", text: "ㄷ"},
-      {id: "r", text: "ㄹ"},
-      {id: "m", text: "ㅁ"},
+    basic_consonants :[
       {id: "b", text: "ㅂ"},
-      {id: "s", text: "ㅅ"},
-      {id: "ng", text: "ㅇ"},
-      {id: "ch", text: "ㅊ"},
-      {id: "k", text: "ㅋ"},
-      {id: "t", text: "ㅌ"},
-      {id: "p", text: "ㅍ"},
-      {id: "h", text: "ㅎ"},
+      {id: "d", text: "ㄷ"},
       {id: "j", text: "ㅈ"},
+      {id: "g", text:"ㄱ"},
+      {id: "s", text: "ㅅ"},
+      {id: "n", text: "ㄴ"},
+      {id: "m", text: "ㅁ"},
+      {id: "r", text: "ㄹ"},
+      {id: "h", text: "ㅎ"},
+      {id: "ng", text: "ㅇ"},
+
+  
       
   ],
-  double_consonants:[
-    {id: "gg", text: "ㄲ"},
-    {id: "dd", text: "ㄸ"},
-    {id: "tt", text: "ㄳ"},
+  tense_consonants:[
+    {id: "tt", text:  "ㄸ"},
     {id: "pp", text: "ㅃ"},
-    {id: "ss", text: "ㅆ"},
+    {id: "kk", text: "ㄲ"},
     {id: "jj", text: "ㅉ"},
-    {id: "bb", text: "ㅍ"},
-    {id: "gg", text: "ㅃ"},
+    {id: "ss", text: "ㅆ"},
+  ],
+  aspirated_consonants:[
+    {id:"p", text:"ㅍ"},
+    {id:"t", text:"ㅌ"},
+    {id:"k", text:"ㅋ"},
+    {id:"ch", text:"ㅊ"}
+
   ],
   compound_vowels:[
     {id:"e", text:"ㅔ"},
