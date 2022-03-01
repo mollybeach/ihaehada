@@ -169,10 +169,23 @@
           </div>
         </div>
 
-                <div class="card">
+        <div class="card">
           <h1 slot="header">Wednesday Feb 9th 2022</h1>
           <div class="word">
-            <div v-for="item in items.slice(48,63)" :key="item.id">
+            <div v-for="item in items.slice(48,62)" :key="item.id">
+              <div class="english">{{item.id}}</div>
+              <div class="hear" v-for="value in item.values" :key="value.values" v-on:click="readAloud(value.korean)">
+                <button class="read-button korean">{{value.korean}}</button>
+                <div class="pronunciation">{{value.romance}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h1 slot="header">Wednesday Feb 16th 2022</h1>
+          <div class="word">
+            <div v-for="item in items.slice(62,83)" :key="item.id">
               <div class="english">{{item.id}}</div>
               <div class="hear" v-for="value in item.values" :key="value.values" v-on:click="readAloud(value.korean)">
                 <button class="read-button korean">{{value.korean}}</button>
@@ -499,7 +512,9 @@ export default {
                                 romance:"goh-ng"
                             }],
       },
-      //week 5: axe, rabbit , elder brother, little child, to be salty, to be busy, elephant, korean wrestling, Mr., honey, daughter, bread, rice, steamed
+      //week 5: 
+      //english : axe, rabbit , elder brother, little child, to be salty, to be busy, elephant, korean wrestling, Mr., honey, daughter, bread, rice, steamed
+
       {id : "Mr.", values:[{
                                 korean:"아저씨",
                                 romance:"ah-juh-ssee"
@@ -570,7 +585,115 @@ export default {
                                 korean:"쌀",
                                 romance:"ss-ah-l"
                             }],
-      }
+      },
+    //week6 english: medicine, kitchen, outside, rice cake, soup, cooked rice meal, front, home, next to , cup, soon, end, clothes, went, day, face, to be good, taste, flower, red bean
+      // romance: yah-g, uh-g bah-g, ttuh-g, guh-g, bah-b, ah-b, jee-b, yuh-b, kkuh-b, noh-d, kkeu-d, oh-d, gah-d, nah-d, nah-d, joh-d, mah-d, kkoh-d, ppah-d
+    {id : "medicine", values:[{
+                                korean:"약",
+                                romance:"yug"
+                            }],
+    },
+    {id : "kitchen", values:[{
+                                korean:"약",
+                                romance:"yag"
+                            }],
+    },
+    {id : "outside", values:[{
+                                korean:"밖",
+                                romance:"bah-g"
+                              }],
+    },
+    {id : "rice cake", values:[{
+                                korean:"떡",
+                                romance:"ttuh-g"
+                              }],
+    },
+    {id : "soup", values:[{
+                                korean:"국",
+                                romance:"guh-g"
+                          }],
+    },
+    {id : "cooked rice meal", values:[{
+                                korean:"밥",
+                                romance:"bah-b"
+                          }],
+    },
+    {id : "front", values:[{
+                                korean:"앞",
+                                romance:"ah-b"
+                          }],
+    },
+    {id : "home", values:[{
+                                korean:"집",
+                                romance:"jee-b"
+                          }],
+    },
+    {id : "next to", values:[{
+                                korean:"옆",
+                                romance:"yuh-b"
+                          }],
+    },
+    {id : "cup", values:[{
+                                korean:"컵",
+                                romance:"kkuh-b"
+                          }],
+    },
+    {id : "soon", values:[{
+                                korean:"곧",
+                                romance:"noh-d"
+                          }],
+    },
+    {id : "end", values:[{
+                                korean:"끝",
+                                romance:"kkeu-d"
+                          }],
+    },
+    {id : "clothes", values:[{
+                                korean:"옷",
+                                romance:"oh-d"
+                          }],
+    },
+    {id : "went", values:[{
+                                korean:"갔",
+                                romance:"gah-d"
+                          }],
+    },
+    {id : "day", values:[{
+                                korean:"갓",
+                                romance:"nah-d"
+                          }],
+    },
+    {id : "face", values:[{
+                                korean:"갗",
+                                romance:"nah-d"
+                          }],                   
+    },
+    {id : "to be good", values:[{
+                                korean:"좋",
+                                romance:"joh-d"
+                          }],
+    },
+    {id : "taste", values:[{
+                                korean:"밋",
+                                romance:"mah-d"
+                          }],
+    },
+    {id : "flower", values:[{
+                                korean:"꽃",
+                                romance:"kkoh-d"
+                          }],
+    },
+    {id : "red bean", values:[{
+                                korean:"팥",
+                                romance:"ppah-d"
+                            }],
+    },               
+
+
+                            
+                                
+
+
 
     ],
 
