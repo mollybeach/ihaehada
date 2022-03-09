@@ -771,8 +771,8 @@ export default {
     korean: 이거 뭐예요?, 밥 에요, 국 에요, 니물 에요, 써개 에요, 김치 에요, 것가락 에요, 술가릭 에요,
     */
     {id : "What is this thing?", values:[{
-                                korean:"이거 뭐예요?",
-                                romance:"ige mwoeyo"
+                                korean:"이게 뭐예요?",
+                                romance:"iguhe mwoeyo"
                             }],
     },
     {id : "rice is this", values:[{
@@ -792,7 +792,7 @@ export default {
     },
     {id : "seed dish is this", values:[{
                                 korean:"써개 에요",
-                                romance:"ssigae ieyo"
+                                romance:"ssugae ieyo"
                             }],
     },
     {id : "kimchi is this", values:[{
