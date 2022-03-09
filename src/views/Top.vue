@@ -185,7 +185,46 @@
         <div class="card">
           <h1 slot="header">Wednesday Feb 16th 2022</h1>
           <div class="word">
-            <div v-for="item in items.slice(62,83)" :key="item.id">
+            <div v-for="item in items.slice(62,82)" :key="item.id">
+              <div class="english">{{item.id}}</div>
+              <div class="hear" v-for="value in item.values" :key="value.values" v-on:click="readAloud(value.korean)">
+                <button class="read-button korean">{{value.korean}}</button>
+                <div class="pronunciation">{{value.romance}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <div class="card">
+          <h1 slot="header">Wednesday Feb 23rd 2022</h1>
+          <div class="word">
+            <div v-for="item in items.slice(82,89)" :key="item.id">
+              <div class="english">{{item.id}}</div>
+              <div class="hear" v-for="value in item.values" :key="value.values" v-on:click="readAloud(value.korean)">
+                <button class="read-button korean">{{value.korean}}</button>
+                <div class="pronunciation">{{value.romance}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h1 slot="header">Wednesday March 2nd 2022</h1>
+          <div class="word">
+            <div v-for="item in items.slice(89,97)" :key="item.id">
+              <div class="english">{{item.id}}</div>
+              <div class="hear" v-for="value in item.values" :key="value.values" v-on:click="readAloud(value.korean)">
+                <button class="read-button korean">{{value.korean}}</button>
+                <div class="pronunciation">{{value.romance}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <div class="card">
+          <h1 slot="header">Numbers</h1>
+          <div class="word">
+            <div v-for="item in items.slice(97,109)" :key="item.id">
               <div class="english">{{item.id}}</div>
               <div class="hear" v-for="value in item.values" :key="value.values" v-on:click="readAloud(value.korean)">
                 <button class="read-button korean">{{value.korean}}</button>
@@ -687,10 +726,160 @@ export default {
                                 korean:"팥",
                                 romance:"ppah-d"
                             }],
-    },               
+    }, 
+    //week 7: english, rice,  soup, herb dish,  seed dish, kimchi, chopsticks,spoon
+    //romance: bab, goug, namul, ssigae, gimchi, jusgalan, seudgalag,
+    //korean: 밥, 국, 니물, 써개,  김치,것가락, 술가릭,
+    {id : "rice", values:[{
+                                korean:"밥",
+                                romance:"bab"
+                            }],
+    },
+    {id : "soup", values:[{
+                                korean:"국",
+                                romance:"goug"
+                            }],
+    },
+    {id : "herb dish", values:[{
+                                korean:"니물",
+                                romance:"namul"
+                            }],
+    },
+    {id : "seed dish", values:[{
+                                korean:"써개",
+                                romance:"ssigae"
+                            }],
+    },
+    {id : "kimchi", values:[{
+                                korean:"김치",
+                                romance:"gimchi"
+                            }],
+    },
+    {id : "chopsticks", values:[{
+                                korean:"것가락",
+                                romance:"gusgalan"
+                            }],
+    },
+    {id : "spoon", values:[{
+                                korean:"술가릭",
+                                romance:"seudgalag"
+                            }],
+    },
+    /* week 8:
+    english: What is this thing?, rice is this, soup is this, herb dish is this, seed dish is this, kimchi is this, chopsticks is this, spoon is this,
+    romance: ige mwoeyo, bab ieyo, goug ieyo, namul ieyo, ssigae ieyo, gimchi ieyo, jusgalan ieyo, seudgalag ieyo,
+    korean: 이거 뭐예요?, 밥 에요, 국 에요, 니물 에요, 써개 에요, 김치 에요, 것가락 에요, 술가릭 에요,
+    */
+    {id : "What is this thing?", values:[{
+                                korean:"이거 뭐예요?",
+                                romance:"ige mwoeyo"
+                            }],
+    },
+    {id : "rice is this", values:[{
+                                korean:"밥 에요",
+                                romance:"bab ieyo"
+                            }],
+    },
+    {id : "soup is this", values:[{
+                                korean:"국 에요",
+                                romance:"goug ieyo"
+                            }],
+    },
+    {id : "herb dish is this", values:[{
+                                korean:"니물 에요",
+                                romance:"namul ieyo"
+                            }],
+    },
+    {id : "seed dish is this", values:[{
+                                korean:"써개 에요",
+                                romance:"ssigae ieyo"
+                            }],
+    },
+    {id : "kimchi is this", values:[{
+                                korean:"김치 에요",
+                                romance:"gimchi ieyo"
+                            }],
+    },
+    {id : "chopsticks is this", values:[{
+                                korean:"것가락 에요",
+                                romance:"gosgalang ieyo"
+                            }],
+    },
+    {id : "spoon is this", values:[{
+                                korean:"술가릭 에요",
+                                romance:"seudgalag ieyo"
+                            }],
+    },
+    /*Week 9:
+    english:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+    romanace: Hana, Bul, Set, Net,DaSeot, YeoSeot, Ilgeob, YeolDeol, Ahop, Yeol, Yeol Hana, Yeol Bul
+    korean: 하나, 둘, 셋, 넷, 다섯, 여섯, 일곱, 여덟, 아홉, 열, 열한, 열두, 열세,
+
+    */
+    {id : "1", values:[{
+                                korean:"하나",
+                                romance:"Hana"
+                            }],
+    },
+    {id : "2", values:[{
+                                korean:"둘",
+                                romance:"Bul"
+                            }],
+    },
+    {id : "3", values:[{
+                                korean:"셋",
+                                romance:"Set"
+                            }],
+    },
+    {id : "4", values:[{
+                                korean:"넷",
+                                romance:"Net"
+                            }],
+    },
+    {id : "5", values:[{
+                                korean:"다섯",
+                                romance:"DaSeot"
+                            }],
+    },
+    {id : "6", values:[{
+                                korean:"여섯",
+                                romance:"YeoSeot"
+                            }],
+    },
+    {id : "7", values:[{
+                                korean:"일곱",
+                                romance:"Ilgeob"
+                            }],
+    },
+    {id : "8", values:[{
+                                korean:"여덟",
+                                romance:"Yeol Deol"
+                            }],
+    },
+    {id : "9", values:[{
+                                korean:"아홉",
+                                romance:"Ahop"
+                            }],
+    },
+    {id : "10", values:[{
+                                korean:"열",
+                                romance:"Yeol"
+                            }],
+    },
+    {id : "11", values:[{
+                                korean:"열한",
+                                romance:"Yeol Hana"
+                            }],
+    },
+    {id : "12", values:[{
+                                korean:"열두",
+                                romance:"Yeol Bul"
+                            }],
+    },
 
 
-                            
+
+
                                 
 
 
