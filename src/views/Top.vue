@@ -802,12 +802,12 @@ export default {
     },
     {id : "chopsticks is this", values:[{
                                 korean:"것가락 에요",
-                                romance:"gosgalang ieyo"
+                                romance:"Gus-Galeeg ieyo"
                             }],
     },
     {id : "spoon is this", values:[{
                                 korean:"술가릭 에요",
-                                romance:"seudgalag ieyo"
+                                romance:"Seul-Galeeg ieyo"
                             }],
     },
     /*Week 9:
