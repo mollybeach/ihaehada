@@ -2,7 +2,7 @@
 #ihaehada 
 #korean lessons website
 https://ihaehada.firebaseapp.com/
-This is a start-up kit for a Firebase web project, which uses Vue.js.
+This is a start-up kit for a Firebase web project, which uses Vue.js.0
 
 There is also a start-up kit using Vue3
 
