@@ -4,7 +4,7 @@
 https://ihaehada.firebaseapp.com/
 This is a start-up kit for a Firebase web project, which uses Vue.js.0
 
-There is also a start-up kit using Vue3
+There is also a start-up kit using Vue3.
 
 https://github.com/isamu/firebase-vue3-startup-kit
 
