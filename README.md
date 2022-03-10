@@ -14,7 +14,7 @@ https://github.com/isamu/firebase-vue3-startup-kit
 1. Git clone this repository
 2. Run "npm install firebase-tools -g" to install firebase tools.
 3. Run "npm install" once to get necessary node modules.
-4. Run "npm install" once in the functions directory as well.
+4. Run "npm install" once in the functions directory as well..
 5. Open the firebase console (from https://firebase.google.com) and add a project
 6. From the dashboard of this project, add an app and choose "web" (</>).
 7. From the setting of this app, choose "Config" (in Firebase SDK snippet)
