@@ -633,7 +633,7 @@ export default {
                             }],
     },
     {id : "kitchen", values:[{
-                                korean:"약",
+                                korean:"억",
                                 romance:"yag"
                             }],
     },
@@ -698,12 +698,12 @@ export default {
                           }],
     },
     {id : "day", values:[{
-                                korean:"갓",
+                                korean:"낫",
                                 romance:"nah-d"
                           }],
     },
     {id : "face", values:[{
-                                korean:"갗",
+                                korean:"낯",
                                 romance:"nah-d"
                           }],                   
     },
@@ -741,7 +741,7 @@ export default {
                             }],
     },
     {id : "herb dish", values:[{
-                                korean:"니물",
+                                korean:"나물",
                                 romance:"namul"
                             }],
     },
@@ -757,12 +757,12 @@ export default {
     },
     {id : "chopsticks", values:[{
                                 korean:"것가락",
-                                romance:"gusgalan"
+                                romance:"Gus-Galeeg"
                             }],
     },
     {id : "spoon", values:[{
                                 korean:"술가릭",
-                                romance:"seudgalag"
+                                romance:"Seul-Galeegg"
                             }],
     },
     /* week 8:
@@ -786,7 +786,7 @@ export default {
                             }],
     },
     {id : "herb dish is this", values:[{
-                                korean:"니물 에요",
+                                korean:"나물 에요",
                                 romance:"namul ieyo"
                             }],
     },
@@ -797,7 +797,7 @@ export default {
     },
     {id : "kimchi is this", values:[{
                                 korean:"김치 에요",
-                                romance:"gimchi ieyo"
+                                romance:"Gimchi ieyo"
                             }],
     },
     {id : "chopsticks is this", values:[{
