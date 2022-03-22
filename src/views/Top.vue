@@ -221,7 +221,7 @@
           </div>
         </div>
 
-                <div class="card">
+      <div class="card">
           <h1 slot="header">Numbers</h1>
           <div class="word">
             <div v-for="item in items.slice(97,109)" :key="item.id">
@@ -233,7 +233,9 @@
             </div>
           </div>
         </div>
-
+    <!-- use the imported card component -->
+    <CardComponent :item="phrases" />
+ 
       </div>
     </main>
   </body>
@@ -241,7 +243,19 @@
 
 
 <script>
+/* eslint-disable vue/no-unused-components */
+import CardComponent from '../components/CardComponent.vue'
+
 export default {
+  
+  name:'Top',
+  components: {
+    CardComponent
+  },
+
+
+
+
 
   data() {
     return {
@@ -948,10 +962,7 @@ export default {
         navigator.userAgent
       );*/
     },
-    //write a method to refresh the page
-    refresh(){
-      location.reload();
-    },
+
     readAloud(word) {
       let msg = new SpeechSynthesisUtterance();
       msg.text = word;
