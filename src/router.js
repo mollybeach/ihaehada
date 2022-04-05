@@ -7,6 +7,7 @@ import Protected from '@/views/Protected'
 import Message from '@/components/Message'
 import Signin from '@/components/Signin'
 import Signout from '@/views/Signout'
+import About from '@/views/About'
 
 Vue.use(VueRouter)
 
@@ -43,7 +44,13 @@ const router = new VueRouter({
       path: '/Protected',
       name: 'protected',
       component: Protected,
+    },
+    {
+      path: '/About',
+      name: 'about',
+      component: About,
     }
+
   ]
 })
 
