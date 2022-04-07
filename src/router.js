@@ -5,7 +5,7 @@ import Top from '@/views/Top'
 import Hello from '@/views/Hello'
 import Protected from '@/views/Protected'
 import Message from '@/components/Message'
-import Signin from '@/components/Signin'
+import Signin from '@/views/Signin'
 import Signout from '@/views/Signout'
 import About from '@/views/About'
 
