@@ -98,10 +98,10 @@
       </v-toolbar-title>
       <v-spacer class="spacer"></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down  v-toolbar__content" style="height: 64px">
-        <router-link to="/" class="btn--active btn btn--flat btn--router" style="position: relative;"><v-btn flat style="color: white" >Home</v-btn></router-link>
-        <router-link to="/Hangul"  class="btn--active btn btn--flat btn--router" style="position: relative;"> <v-btn flat style="color: white">Hangul<i aria-hidden="true" class="icon icon--right theme--dark material-icons">palette</i></v-btn></router-link>
-        <router-link to="/Words"  class="btn--active btn btn--flat btn--router" style="position: relative;"> <v-btn flat style="color: white">Words<i aria-hidden="true" class="icon icon--right theme--dark material-icons">gavel</i></v-btn></router-link>
-        <router-link to="/Numbers"  class="btn--active btn btn--flat btn--router" style="position: relative;"> <v-btn flat style="color: white">Numbers<i aria-hidden="true" class="icon icon--right theme--dark material-icons">gavel</i></v-btn></router-link>
+        <router-link to="/" class="btn--active btn btn--flat btn--router" style="position: relative;"><v-btn flat style="color: white">Home<i aria-hidden="true" class="icon icon--right theme--dark material-icons">cruelty_free</i></v-btn></router-link>
+        <router-link to="/Hangul"  class="btn--active btn btn--flat btn--router" style="position: relative;"> <v-btn flat style="color: white">Hangul<i aria-hidden="true" class="icon icon--right theme--dark material-icons">translate</i></v-btn></router-link>
+        <router-link to="/Words"  class="btn--active btn btn--flat btn--router" style="position: relative;"> <v-btn flat style="color: white">Words<i aria-hidden="true" class="icon icon--right theme--dark material-icons">textsms</i></v-btn></router-link>
+        <router-link to="/Numbers"  class="btn--active btn btn--flat btn--router" style="position: relative;"> <v-btn flat style="color: white">Numbers<i aria-hidden="true" class="icon icon--right theme--dark material-icons">numbers</i></v-btn></router-link>
         <router-link to="/About"  class="btn--active btn btn--flat btn--router" style="position: relative;"> <v-btn flat style="color: white">About<i aria-hidden="true" class="icon icon--right theme--dark material-icons">help_outline</i></v-btn></router-link>
       </v-toolbar-items>
     </v-toolbar>
