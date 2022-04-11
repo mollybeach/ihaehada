@@ -14,8 +14,8 @@ Website Design:
 ![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715385/ihaehada/web4_nz9im0.png)
 
 
-#ihaehada 
-This is a start-up kit for a Firebase web project, which uses Vue.js.0
+#ihaehada  <br />
+This is a start-up kit for a Firebase web project, which uses Vue.js.0 <br />
 
 There is also a start-up kit using Vue3.
 
