@@ -5,7 +5,14 @@
                 <div class="container fluid">
                     <div class="layout">
                         <div class="flex pa-3">
-                            <h1 class="title-header">ihaehada</h1>
+                            <div style="display: flex; justify-content:center " >
+                                <h1 class="title-header">ihaehada</h1>
+                                <img
+                                    src="https://res.cloudinary.com/storagemanagementcontainer/image/upload/c_scale,w_93/v1649712911/ihaehada/koreandiscordimg_kzqd6h.png"
+                                    alt="logo"
+                                    class="logo"
+                                />
+                            </div>
                             <p class="py-1">
                                 learn korean language app browse the ihaehada
                                 collection of words and phrases
@@ -161,7 +168,7 @@ export default {
             return true;
             /* return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
-      );*/
+        );*/
         },
 
         readAloud(word) {
