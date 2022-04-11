@@ -2,9 +2,9 @@
 
 ![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715786/ihaehada/title_rdwtze.png)
 ![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715857/ihaehada/header_e7bdal.png)
-View our website 
-[here](https://ihaehada.firebaseapp.com/)
-or view it [here](https://ihaehada.web.app/).
+View our website <br />
+https://ihaehada.firebaseapp.com/ <br />
+or view it https://ihaehada.web.app/ <br />
 
 Website Design: 
 
@@ -20,8 +20,6 @@ This is a start-up kit for a Firebase web project, which uses Vue.js.0
 There is also a start-up kit using Vue3.
 
 https://github.com/isamu/firebase-vue3-startup-kit
-
-
 ## Instruction
 
 1. Git clone this repository
