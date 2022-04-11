@@ -1,57 +1,53 @@
 <template>
     <body>
-                <div class="flex xs12">
-                    <div class="card" style="height: auto">
-                        <div class="container fluid">
-                            <div class="layout">
-                                <div class="flex pa-3">
-                                    <h1 class="title-header">ihaehada</h1>
-                                    <p class="py-1">
-                                      learn korean language app browse the ihaehada collection of words and phrases
-                                    </p>
-                                </div>
-                            </div>
+        <div class="flex xs12">
+            <div class="card" style="height: auto">
+                <div class="container fluid">
+                    <div class="layout">
+                        <div class="flex pa-3">
+                            <h1 class="title-header">ihaehada</h1>
+                            <p class="py-1">
+                                learn korean language app browse the ihaehada
+                                collection of words and phrases
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <h1 slot="header" class="title-header">
-                      
-                        Greetings
-                        <button slot="button" class="read-button">
-                            <img
-                                src="https://icons.veryicon.com/png/o/miscellaneous/vue3-ebook/speak-5.png"
-                                alt="speak-icon"
-                                style="height: 30px; font-size: 0.5rem"
-                            />
+            </div>
+        </div>
+        <div class="card">
+            <h1 slot="header" class="title-header">
+                Greetings
+                <button slot="button" class="read-button">
+                    <img
+                        src="https://icons.veryicon.com/png/o/miscellaneous/vue3-ebook/speak-5.png"
+                        alt="speak-icon"
+                        style="height: 30px; font-size: 0.5rem"
+                    />
+                </button>
+            </h1>
+            <div class="word">
+                <div v-for="phrase in phrases.slice(0, 9)" :key="phrase.id">
+                    <div class="english">{{ phrase.id }}</div>
+                    <div
+                        class="hear"
+                        v-for="value in phrase.values"
+                        :key="value.values"
+                        v-on:click="readAloud(value.korean)"
+                    >
+                        <button class="read-button korean">
+                            {{ value.korean }}
                         </button>
-                    </h1>
-                    <div class="word">
-                        <div
-                            v-for="phrase in phrases.slice(0, 9)"
-                            :key="phrase.id"
-                        >
-                            <div class="english">{{ phrase.id }}</div>
-                            <div
-                                class="hear"
-                                v-for="value in phrase.values"
-                                :key="value.values"
-                                v-on:click="readAloud(value.korean)"
-                            >
-                                <button class="read-button korean">
-                                    {{ value.korean }}
-                                </button>
-                                <div class="pronunciation">
-                                    {{ value.romance }}
-                                </div>
-                            </div>
+                        <div class="pronunciation">
+                            {{ value.romance }}
                         </div>
                     </div>
                 </div>
-   
-                <!-- use the imported card component -->
-                <CardComponent :item="phrases" />
-       
+            </div>
+        </div>
+
+        <!-- use the imported card component -->
+        <CardComponent :item="phrases" />
     </body>
 </template>
 
@@ -158,7 +154,6 @@ export default {
                     ],
                 },
             ],
-
         };
     },
     methods: {
@@ -180,6 +175,4 @@ export default {
 };
 </script>
 
-<style>
-
-</style>
+<style></style>

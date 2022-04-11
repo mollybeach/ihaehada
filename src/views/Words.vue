@@ -1,444 +1,740 @@
 <template>
-  <body>
+    <body>
         <main app="">
-          <div class="layout row wrap mb-3">
-            <div class="flex xs12 ">
-              <div class="card" style="height: auto">
-                <div class="container fluid">
-                  <div class="layout">
-                    <div class="flex pa-3">
-                      <h1 class="title-header">Korean Words of the Week</h1>
-                            <h2>In chronological order </h2>
-                            <p>(oldest to newest)</p>
-                      <p>
-                        Click on a card button to hear the word spoken aloud more about it. English word aboue. Latin desciption of the sound is to the right
-                      </p>
+            <div class="layout row wrap mb-3">
+                <div class="flex xs12">
+                    <div class="card" style="height: auto">
+                        <div class="container fluid">
+                            <div class="layout">
+                                <div class="flex pa-3">
+                                    <h1 class="title-header">
+                                        Korean Words of the Week
+                                    </h1>
+                                    <h2>In chronological order</h2>
+                                    <p>(oldest to newest)</p>
+                                    <p>
+                                        Click on a card button to hear the word
+                                        spoken aloud more about it. English word
+                                        aboue. Latin desciption of the sound is
+                                        to the right
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="flex text-xs-center xs12">
-              <div class="" style="height: auto">
-                <div class="layout row wrap">
-
-                  <div class="flex text-xs-center xs12">
+                <div class="flex text-xs-center xs12">
                     <div class="" style="height: auto">
-                      <div class="container fluid grid-list-md">
-                        
-                        <div
-                          class="layout row justify-center align-center mt-2 mb-2"
-                        >
-                          <button
-                            disabled="disabled"
-                            type="button"
-                            class="btn btn--disabled btn--floating btn--small theme--dark cyanBlue lighten-1"
-                          >
-                            <div class="btn__content">
-                              <i
-                                aria-hidden="true"
-                                class="icon theme--dark fas fa-angle-double-left"
-                              ></i>
-                              
-                            </div>
-                          </button>
-                          <button
-                            disabled="disabled"
-                            type="button"
-                            class="btn btn--disabled btn--floating btn--small theme--dark cyanBlue lighten-1"
-                          >
-                            <div class="btn__content">
-                              <i
-                                aria-hidden="true"
-                                class="icon theme--dark fas fa-angle-left"
-                              ></i>
-                            </div>
-                          </button>
-                          <div align-center="" class="card__title">
-                            
-                            <h1>1 - 9</h1>
-                          </div>
-                          <button
-                            type="button"
-                            class="btn btn--floating btn--small theme--dark cyanBlue lighten-1"
-                            mt-4=""
-                          >
-                            <div class="btn__content">
-                              <i
-                                aria-hidden="true"
-                                class="icon theme--dark fas fa-angle-right"
-                              ></i>
-                            </div>
-                          </button>
-                          <button
-                            type="button"
-                            class="btn btn--floating btn--small theme--dark cyanBlue lighten-1"
-                            mt-4=""
-                          >
-                            <div class="btn__content">
-                              <i
-                                aria-hidden="true"
-                                class="icon theme--dark fas fa-angle-double-right"
-                              ></i>
-                            </div>
-                          </button>
-                        </div>
-                        
                         <div class="layout row wrap">
-                          <div class="flex xs12 sm6 md4 lg4 xl4">
-                            <div
-                              class="ma-2 pa-3 pt-0 card--hover"
-                              style="height: auto"
-                              >
-                              <!--  <h5 Miner #1</h5>-->
-                            <div class="card">
-                              <h1 slot="header">Wednesday January 12th 2022</h1>
-                              <div class="word">
-                                    <div v-for="item in items.slice(0, 7)" :key="item.id">
-                                        <div class="english">{{ item.id }}</div>
+                            <div class="flex text-xs-center xs12">
+                                <div class="" style="height: auto">
+                                    <div class="container fluid grid-list-md">
                                         <div
-                                            class="hear"
-                                            v-for="value in item.values"
-                                            :key="value.values"
-                                            v-on:click="readAloud(value.korean)"
+                                            class="layout row justify-center align-center mt-2 mb-2"
                                         >
-                                            <button class="read-button korean">
-                                                {{ value.korean }}
+                                            <button
+                                                disabled="disabled"
+                                                type="button"
+                                                class="btn btn--disabled btn--floating btn--small theme--dark cyanBlue lighten-1"
+                                            >
+                                                <div class="btn__content">
+                                                    <i
+                                                        aria-hidden="true"
+                                                        class="icon theme--dark fas fa-angle-double-left"
+                                                    ></i>
+                                                </div>
                                             </button>
-                                            <div class="pronunciation">{{ value.romance }}</div>
+                                            <button
+                                                type="button"
+                                                class="btn btn--floating btn--small theme--dark cyanBlue lighten-1"
+                                                mt-4=""
+                                            >
+                                                <div class="btn__content">
+                                                    <i
+                                                        aria-hidden="true"
+                                                        class="icon theme--dark fas fa-angle-right material-icons"
+                                                        style="display: flex"
+                                                        >keyboard_arrow_right</i
+                                                    >
+                                                </div>
+                                            </button>
+                                            <div
+                                                align-center=""
+                                                class="card__title"
+                                            >
+                                                <h1>1 - 9</h1>
+                                            </div>
+                                            <button
+                                                type="button"
+                                                class="btn btn--floating btn--small theme--dark cyanBlue lighten-1"
+                                                mt-4=""
+                                            >
+                                                <div class="btn__content">
+                                                    <i
+                                                        aria-hidden="true"
+                                                        class="icon theme--dark fas fa-angle-right material-icons"
+                                                        style="display: flex"
+                                                        >keyboard_arrow_right</i
+                                                    >
+                                                </div>
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btn btn--floating btn--small theme--dark cyanBlue lighten-1"
+                                                mt-4=""
+                                            >
+                                                <div class="btn__content">
+                                                    <i
+                                                        aria-hidden="true"
+                                                        class="icon theme--dark fas fa-angle-right material-icons"
+                                                        style="display: flex"
+                                                        >keyboard_double_arrow_right</i
+                                                    >
+                                                </div>
+                                            </button>
+                                        </div>
+
+                                        <div class="layout row wrap">
+                                            <div
+                                                class="flex xs12 sm6 md4 lg4 xl4"
+                                            >
+                                                <div
+                                                    class="ma-2 pa-3 pt-0 card--hover"
+                                                    style="height: auto"
+                                                >
+                                                    <!--  <h5 Miner #1</h5>-->
+                                                    <div class="card">
+                                                        <h1 slot="header">
+                                                            Wednesday January
+                                                            12th 2022
+                                                        </h1>
+                                                        <div class="word">
+                                                            <div
+                                                                v-for="item in items.slice(
+                                                                    0,
+                                                                    7
+                                                                )"
+                                                                :key="item.id"
+                                                            >
+                                                                <div
+                                                                    class="english"
+                                                                >
+                                                                    {{
+                                                                        item.id
+                                                                    }}
+                                                                </div>
+                                                                <div
+                                                                    class="hear"
+                                                                    v-for="value in item.values"
+                                                                    :key="
+                                                                        value.values
+                                                                    "
+                                                                    v-on:click="
+                                                                        readAloud(
+                                                                            value.korean
+                                                                        )
+                                                                    "
+                                                                >
+                                                                    <button
+                                                                        class="read-button korean"
+                                                                    >
+                                                                        {{
+                                                                            value.korean
+                                                                        }}
+                                                                    </button>
+                                                                    <div
+                                                                        class="pronunciation"
+                                                                    >
+                                                                        {{
+                                                                            value.romance
+                                                                        }}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  Miner # 1-->
+                                            <div
+                                                class="flex xs12 sm6 md4 lg4 xl4"
+                                            >
+                                                <div
+                                                    class="ma-2 pa-3 pt-0 card--hover"
+                                                    style="height: auto"
+                                                >
+                                                    <div class="card">
+                                                        <h1 slot="header">
+                                                            Wednesday January
+                                                            19th 2022
+                                                        </h1>
+                                                        <div class="word">
+                                                            <div
+                                                                v-for="item in items.slice(
+                                                                    7,
+                                                                    21
+                                                                )"
+                                                                :key="item.id"
+                                                            >
+                                                                <div
+                                                                    class="english"
+                                                                >
+                                                                    {{
+                                                                        item.id
+                                                                    }}
+                                                                </div>
+                                                                <div
+                                                                    class="hear"
+                                                                    v-for="value in item.values"
+                                                                    :key="
+                                                                        value.values
+                                                                    "
+                                                                    v-on:click="
+                                                                        readAloud(
+                                                                            value.korean
+                                                                        )
+                                                                    "
+                                                                >
+                                                                    <button
+                                                                        class="read-button korean"
+                                                                    >
+                                                                        {{
+                                                                            value.korean
+                                                                        }}
+                                                                    </button>
+                                                                    <div
+                                                                        class="pronunciation"
+                                                                    >
+                                                                        {{
+                                                                            value.romance
+                                                                        }}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex xs12 sm6 md4 lg4 xl4"
+                                            >
+                                                <div
+                                                    class="ma-2 pa-3 pt-0 card--hover"
+                                                    style="height: auto"
+                                                >
+                                                    <!--  <h5 Miner #1</h5>-->
+                                                    <div class="card">
+                                                        <h1 slot="header">
+                                                            Wednesday January
+                                                            12th 2022
+                                                        </h1>
+                                                        <div class="word">
+                                                            <div
+                                                                v-for="item in items.slice(
+                                                                    0,
+                                                                    7
+                                                                )"
+                                                                :key="item.id"
+                                                            >
+                                                                <div
+                                                                    class="english"
+                                                                >
+                                                                    {{
+                                                                        item.id
+                                                                    }}
+                                                                </div>
+                                                                <div
+                                                                    class="hear"
+                                                                    v-for="value in item.values"
+                                                                    :key="
+                                                                        value.values
+                                                                    "
+                                                                    v-on:click="
+                                                                        readAloud(
+                                                                            value.korean
+                                                                        )
+                                                                    "
+                                                                >
+                                                                    <button
+                                                                        class="read-button korean"
+                                                                    >
+                                                                        {{
+                                                                            value.korean
+                                                                        }}
+                                                                    </button>
+                                                                    <div
+                                                                        class="pronunciation"
+                                                                    >
+                                                                        {{
+                                                                            value.romance
+                                                                        }}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex xs12 sm6 md4 lg4 xl4"
+                                            >
+                                                <div
+                                                    class="ma-2 pa-3 pt-0 card--hover"
+                                                    style="height: auto"
+                                                >
+                                                    <!-- Miner #4-->
+                                                    <div class="card">
+                                                        <h1 slot="header">
+                                                            Wednesday January
+                                                            26th 2022
+                                                        </h1>
+                                                        <div class="word">
+                                                            <div
+                                                                v-for="item in items.slice(
+                                                                    21,
+                                                                    35
+                                                                )"
+                                                                :key="item.id"
+                                                            >
+                                                                <div
+                                                                    class="english"
+                                                                >
+                                                                    {{
+                                                                        item.id
+                                                                    }}
+                                                                </div>
+                                                                <div
+                                                                    class="hear"
+                                                                    v-for="value in item.values"
+                                                                    :key="
+                                                                        value.values
+                                                                    "
+                                                                    v-on:click="
+                                                                        readAloud(
+                                                                            value.korean
+                                                                        )
+                                                                    "
+                                                                >
+                                                                    <button
+                                                                        class="read-button korean"
+                                                                    >
+                                                                        {{
+                                                                            value.korean
+                                                                        }}
+                                                                    </button>
+                                                                    <div
+                                                                        class="pronunciation"
+                                                                    >
+                                                                        {{
+                                                                            value.romance
+                                                                        }}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex xs12 sm6 md4 lg4 xl4"
+                                            >
+                                                <div
+                                                    class="ma-2 pa-3 pt-0 card--hover"
+                                                    style="height: auto"
+                                                >
+                                                    <!-- Miner #4-->
+                                                    <div class="card">
+                                                        <h1 slot="header">
+                                                            Wednesday Feb 2nd
+                                                            2022
+                                                        </h1>
+                                                        <div class="word">
+                                                            <div
+                                                                v-for="item in items.slice(
+                                                                    35,
+                                                                    48
+                                                                )"
+                                                                :key="item.id"
+                                                            >
+                                                                <div
+                                                                    class="english"
+                                                                >
+                                                                    {{
+                                                                        item.id
+                                                                    }}
+                                                                </div>
+                                                                <div
+                                                                    class="hear"
+                                                                    v-for="value in item.values"
+                                                                    :key="
+                                                                        value.values
+                                                                    "
+                                                                    v-on:click="
+                                                                        readAloud(
+                                                                            value.korean
+                                                                        )
+                                                                    "
+                                                                >
+                                                                    <button
+                                                                        class="read-button korean"
+                                                                    >
+                                                                        {{
+                                                                            value.korean
+                                                                        }}
+                                                                    </button>
+                                                                    <div
+                                                                        class="pronunciation"
+                                                                    >
+                                                                        {{
+                                                                            value.romance
+                                                                        }}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="flex xs12 sm6 md4 lg4 xl4"
+                                            >
+                                                <div
+                                                    class="ma-2 pa-3 pt-0 card--hover"
+                                                    style="height: auto"
+                                                >
+                                                    <!--  <h5 Miner #1</h5>-->
+
+                                                    <div class="card">
+                                                        <h1 slot="header">
+                                                            Wednesday Feb 9th
+                                                            2022
+                                                        </h1>
+                                                        <div class="word">
+                                                            <div
+                                                                v-for="item in items.slice(
+                                                                    48,
+                                                                    62
+                                                                )"
+                                                                :key="item.id"
+                                                            >
+                                                                <div
+                                                                    class="english"
+                                                                >
+                                                                    {{
+                                                                        item.id
+                                                                    }}
+                                                                </div>
+                                                                <div
+                                                                    class="hear"
+                                                                    v-for="value in item.values"
+                                                                    :key="
+                                                                        value.values
+                                                                    "
+                                                                    v-on:click="
+                                                                        readAloud(
+                                                                            value.korean
+                                                                        )
+                                                                    "
+                                                                >
+                                                                    <button
+                                                                        class="read-button korean"
+                                                                    >
+                                                                        {{
+                                                                            value.korean
+                                                                        }}
+                                                                    </button>
+                                                                    <div
+                                                                        class="pronunciation"
+                                                                    >
+                                                                        {{
+                                                                            value.romance
+                                                                        }}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="flex xs12 sm6 md4 lg4 xl4"
+                                            >
+                                                <div
+                                                    class="ma-2 pa-3 pt-0 card--hover"
+                                                    style="height: auto"
+                                                >
+                                                    <!--  <h5 Miner #1</h5>-->
+                                                    <div class="card">
+                                                        <h1 slot="header">
+                                                            Wednesday Feb 16th
+                                                            2022
+                                                        </h1>
+                                                        <div class="word">
+                                                            <div
+                                                                v-for="item in items.slice(
+                                                                    62,
+                                                                    82
+                                                                )"
+                                                                :key="item.id"
+                                                            >
+                                                                <div
+                                                                    class="english"
+                                                                >
+                                                                    {{
+                                                                        item.id
+                                                                    }}
+                                                                </div>
+                                                                <div
+                                                                    class="hear"
+                                                                    v-for="value in item.values"
+                                                                    :key="
+                                                                        value.values
+                                                                    "
+                                                                    v-on:click="
+                                                                        readAloud(
+                                                                            value.korean
+                                                                        )
+                                                                    "
+                                                                >
+                                                                    <button
+                                                                        class="read-button korean"
+                                                                    >
+                                                                        {{
+                                                                            value.korean
+                                                                        }}
+                                                                    </button>
+                                                                    <div
+                                                                        class="pronunciation"
+                                                                    >
+                                                                        {{
+                                                                            value.romance
+                                                                        }}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex xs12 sm6 md4 lg4 xl4"
+                                            >
+                                                <div
+                                                    class="ma-2 pa-3 pt-0 card--hover"
+                                                    style="height: auto"
+                                                >
+                                                    <!--  <h5 Miner #1</h5>-->
+
+                                                    <div class="card">
+                                                        <h1 slot="header">
+                                                            Wednesday Feb 23rd
+                                                            2022
+                                                        </h1>
+                                                        <div class="word">
+                                                            <div
+                                                                v-for="item in items.slice(
+                                                                    82,
+                                                                    89
+                                                                )"
+                                                                :key="item.id"
+                                                            >
+                                                                <div
+                                                                    class="english"
+                                                                >
+                                                                    {{
+                                                                        item.id
+                                                                    }}
+                                                                </div>
+                                                                <div
+                                                                    class="hear"
+                                                                    v-for="value in item.values"
+                                                                    :key="
+                                                                        value.values
+                                                                    "
+                                                                    v-on:click="
+                                                                        readAloud(
+                                                                            value.korean
+                                                                        )
+                                                                    "
+                                                                >
+                                                                    <button
+                                                                        class="read-button korean"
+                                                                    >
+                                                                        {{
+                                                                            value.korean
+                                                                        }}
+                                                                    </button>
+                                                                    <div
+                                                                        class="pronunciation"
+                                                                    >
+                                                                        {{
+                                                                            value.romance
+                                                                        }}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex xs12 sm6 md4 lg4 xl4"
+                                            >
+                                                <div
+                                                    class="ma-2 pa-3 pt-0 card--hover"
+                                                    style="height: auto"
+                                                >
+                                                    <!--  <h5 Miner #1</h5>-->
+
+                                                    <div class="card">
+                                                        <h1 slot="header">
+                                                            Wednesday March 2nd
+                                                            2022
+                                                        </h1>
+                                                        <div class="word">
+                                                            <div
+                                                                v-for="item in items.slice(
+                                                                    89,
+                                                                    97
+                                                                )"
+                                                                :key="item.id"
+                                                            >
+                                                                <div
+                                                                    class="english"
+                                                                >
+                                                                    {{
+                                                                        item.id
+                                                                    }}
+                                                                </div>
+                                                                <div
+                                                                    class="hear"
+                                                                    v-for="value in item.values"
+                                                                    :key="
+                                                                        value.values
+                                                                    "
+                                                                    v-on:click="
+                                                                        readAloud(
+                                                                            value.korean
+                                                                        )
+                                                                    "
+                                                                >
+                                                                    <button
+                                                                        class="read-button korean"
+                                                                    >
+                                                                        {{
+                                                                            value.korean
+                                                                        }}
+                                                                    </button>
+                                                                    <div
+                                                                        class="pronunciation"
+                                                                    >
+                                                                        {{
+                                                                            value.romance
+                                                                        }}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="layout row justify-center align-center mt-2 mb-2"
+                                        >
+                                            <button
+                                                disabled="disabled"
+                                                type="button"
+                                                class="btn btn--disabled btn--floating btn--small theme--dark cyanBlue lighten-1"
+                                            >
+                                                <div class="btn__content">
+                                                    <i
+                                                        aria-hidden="true"
+                                                        class="icon theme--dark fas fa-angle-double-left"
+                                                    ></i>
+                                                </div>
+                                            </button>
+                                            <button
+                                                disabled="disabled"
+                                                type="button"
+                                                class="btn btn--disabled btn--floating btn--small theme--dark cyanBlue lighten-1"
+                                            >
+                                                <div class="btn__content">
+                                                    <i
+                                                        aria-hidden="true"
+                                                        class="icon theme--dark fas fa-angle-left"
+                                                    ></i>
+                                                </div>
+                                            </button>
+                                            <div
+                                                align-center=""
+                                                class="card__title"
+                                            >
+                                                <h1>1 - 9</h1>
+                                            </div>
+                                            <button
+                                                type="button"
+                                                class="btn btn--floating btn--small theme--dark cyanBlue lighten-1"
+                                                mt-4=""
+                                            >
+                                                <div class="btn__content">
+                                                    <i
+                                                        aria-hidden="true"
+                                                        class="icon theme--dark fas fa-angle-right"
+                                                    ></i>
+                                                </div>
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btn btn--floating btn--small theme--dark cyanBlue lighten-1"
+                                                mt-4=""
+                                            >
+                                                <div class="btn__content">
+                                                    <i
+                                                        aria-hidden="true"
+                                                        class="icon theme--dark fas fa-angle-double-right"
+                                                    ></i>
+                                                </div>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                              </div>
-                            </div>
-                          </div>
-                            <!--  Miner # 1-->
-                          <div class="flex xs12 sm6 md4 lg4 xl4">
-                            <div  class="ma-2 pa-3 pt-0 card--hover" style="height: auto">
-                              <div class="card">
-                                  <h1 slot="header">Wednesday January 19th 2022</h1>
-                                  <div class="word">
-                                      <div v-for="item in items.slice(7, 21)" :key="item.id">
-                                          <div class="english">{{ item.id }}</div>
-                                          <div
-                                              class="hear"
-                                              v-for="value in item.values"
-                                              :key="value.values"
-                                              v-on:click="readAloud(value.korean)"
-                                          >
-                                              <button class="read-button korean">
-                                                  {{ value.korean }}
-                                              </button>
-                                              <div class="pronunciation">
-                                                  {{ value.romance }}
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="flex xs12 sm6 md4 lg4 xl4">
-                            <div
-                              class="ma-2 pa-3 pt-0 card--hover"
-                              style="height: auto"
-                              >
-                              <!--  <h5 Miner #1</h5>-->
-                            <div class="card">
-                              <h1 slot="header">Wednesday January 12th 2022</h1>
-                              <div class="word">
-                                    <div v-for="item in items.slice(0, 7)" :key="item.id">
-                                        <div class="english">{{ item.id }}</div>
-                                        <div
-                                            class="hear"
-                                            v-for="value in item.values"
-                                            :key="value.values"
-                                            v-on:click="readAloud(value.korean)"
-                                        >
-                                            <button class="read-button korean">
-                                                {{ value.korean }}
-                                            </button>
-                                            <div class="pronunciation">{{ value.romance }}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="flex xs12 sm6 md4 lg4 xl4">
-                            <div
-                              class="ma-2 pa-3 pt-0 card--hover"
-                              style="height: auto"
-                              >
-                                            <!-- Miner #4-->
-                              <div class="card">
-                                  <h1 slot="header">Wednesday January 26th 2022</h1>
-                                  <div class="word">
-                                      <div v-for="item in items.slice(21, 35)" :key="item.id">
-                                          <div class="english">{{ item.id }}</div>
-                                          <div
-                                              class="hear"
-                                              v-for="value in item.values"
-                                              :key="value.values"
-                                              v-on:click="readAloud(value.korean)"
-                                          >
-                                              <button class="read-button korean">
-                                                  {{ value.korean }}
-                                              </button>
-                                              <div class="pronunciation">
-                                                  {{ value.romance }}
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
-                          </div>
-                                                    <div class="flex xs12 sm6 md4 lg4 xl4">
-                            <div
-                              class="ma-2 pa-3 pt-0 card--hover"
-                              style="height: auto"
-                              >
-                                            <!-- Miner #4-->
-                <div class="card">
-                    <h1 slot="header">Wednesday Feb 2nd 2022</h1>
-                    <div class="word">
-                        <div v-for="item in items.slice(35, 48)" :key="item.id">
-                            <div class="english">{{ item.id }}</div>
-                            <div
-                                class="hear"
-                                v-for="value in item.values"
-                                :key="value.values"
-                                v-on:click="readAloud(value.korean)"
-                            >
-                                <button class="read-button korean">
-                                    {{ value.korean }}
-                                </button>
-                                <div class="pronunciation">
-                                    {{ value.romance }}
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                            </div>
-                          </div>
-                          
-                          <div class="flex xs12 sm6 md4 lg4 xl4">
-                            <div
-                              class="ma-2 pa-3 pt-0 card--hover"
-                              style="height: auto"
-                              >
-                              <!--  <h5 Miner #1</h5>-->
-
-                <div class="card">
-                    <h1 slot="header">Wednesday Feb 9th 2022</h1>
-                    <div class="word">
-                        <div v-for="item in items.slice(48, 62)" :key="item.id">
-                            <div class="english">{{ item.id }}</div>
-                            <div
-                                class="hear"
-                                v-for="value in item.values"
-                                :key="value.values"
-                                v-on:click="readAloud(value.korean)"
-                            >
-                                <button class="read-button korean">
-                                    {{ value.korean }}
-                                </button>
-                                <div class="pronunciation">
-                                    {{ value.romance }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                            </div>
-                          </div>
-
-                                                    <div class="flex xs12 sm6 md4 lg4 xl4">
-                            <div
-                              class="ma-2 pa-3 pt-0 card--hover"
-                              style="height: auto"
-                              >
-                              <!--  <h5 Miner #1</h5>-->
-                <div class="card">
-                    <h1 slot="header">Wednesday Feb 16th 2022</h1>
-                    <div class="word">
-                        <div v-for="item in items.slice(62, 82)" :key="item.id">
-                            <div class="english">{{ item.id }}</div>
-                            <div
-                                class="hear"
-                                v-for="value in item.values"
-                                :key="value.values"
-                                v-on:click="readAloud(value.korean)"
-                            >
-                                <button class="read-button korean">
-                                    {{ value.korean }}
-                                </button>
-                                <div class="pronunciation">
-                                    {{ value.romance }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                            </div>
-                          </div>
-                                                    <div class="flex xs12 sm6 md4 lg4 xl4">
-                            <div
-                              class="ma-2 pa-3 pt-0 card--hover"
-                              style="height: auto"
-                              >
-                              <!--  <h5 Miner #1</h5>-->
-
-                <div class="card">
-                    <h1 slot="header">Wednesday Feb 23rd 2022</h1>
-                    <div class="word">
-                        <div v-for="item in items.slice(82, 89)" :key="item.id">
-                            <div class="english">{{ item.id }}</div>
-                            <div
-                                class="hear"
-                                v-for="value in item.values"
-                                :key="value.values"
-                                v-on:click="readAloud(value.korean)"
-                            >
-                                <button class="read-button korean">
-                                    {{ value.korean }}
-                                </button>
-                                <div class="pronunciation">
-                                    {{ value.romance }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                            </div>
-                          </div>
-                                                    <div class="flex xs12 sm6 md4 lg4 xl4">
-                            <div
-                              class="ma-2 pa-3 pt-0 card--hover"
-                              style="height: auto"
-                              >
-                              <!--  <h5 Miner #1</h5>-->
-
-                <div class="card">
-                    <h1 slot="header">Wednesday March 2nd 2022</h1>
-                    <div class="word">
-                        <div v-for="item in items.slice(89, 97)" :key="item.id">
-                            <div class="english">{{ item.id }}</div>
-                            <div
-                                class="hear"
-                                v-for="value in item.values"
-                                :key="value.values"
-                                v-on:click="readAloud(value.korean)"
-                            >
-                                <button class="read-button korean">
-                                    {{ value.korean }}
-                                </button>
-                                <div class="pronunciation">
-                                    {{ value.romance }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                            </div>
-                          </div>
-
-
-
-                        </div>
-                        <div
-                          class="layout row justify-center align-center mt-2 mb-2"
-                        >
-                          <button
-                            disabled="disabled"
-                            type="button"
-                            class="btn btn--disabled btn--floating btn--small theme--dark cyanBlue lighten-1"
-                          >
-                            <div class="btn__content">
-                              <i
-                                aria-hidden="true"
-                                class="icon theme--dark fas fa-angle-double-left"
-                              ></i>
-                            </div>
-                          </button>
-                          <button
-                            disabled="disabled"
-                            type="button"
-                            class="btn btn--disabled btn--floating btn--small theme--dark cyanBlue lighten-1"
-                          >
-                            <div class="btn__content">
-                              <i
-                                aria-hidden="true"
-                                class="icon theme--dark fas fa-angle-left"
-                              ></i>
-                            </div>
-                          </button>
-                          <div align-center="" class="card__title">
-                            <h1>1 - 9</h1>
-                          </div>
-                          <button
-                            type="button"
-                            class="btn btn--floating btn--small theme--dark cyanBlue lighten-1"
-                            mt-4=""
-                          >
-                            <div class="btn__content">
-                              <i
-                                aria-hidden="true"
-                                class="icon theme--dark fas fa-angle-right"
-                              ></i>
-                            </div>
-                          </button>
-                          <button
-                            type="button"
-                            class="btn btn--floating btn--small theme--dark cyanBlue lighten-1"
-                            mt-4=""
-                          >
-                            <div class="btn__content">
-                              <i
-                                aria-hidden="true"
-                                class="icon theme--dark fas fa-angle-double-right"
-                              ></i>
-                            </div>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
         </main>
-    <!-- <script type="text/javascript" src="/static/js/manifest.5f946d972125a67eabf1.js"></script>
+        <!-- <script type="text/javascript" src="/static/js/manifest.5f946d972125a67eabf1.js"></script>
                 <script type="text/javascript" src="/static/js/vendor.e47676f654e7bc42a06c.js"></script>
                 <script type="text/javascript" src="/static/js/app.020921c3752b3f33b6dd.js"></script>-->
-    <iframe
-      frameborder="0"
-      allowtransparency="true"
-      src="https://checkout.stripe.com/v3/JdhudoUwvSFS85kPDZEQ.html?distinct_id=6fc92829-18d9-1742-7119-7e180b6b2dbe"
-      name="stripe_checkout_app"
-      class="stripe_checkout_app"
-      style="
-        z-index: 2147483647;
-        display: none;
-        background: rgba(0, 0, 0, 0.004);
-        border: 0px none transparent;
-        overflow: hidden auto;
-        visibility: visible;
-        margin: 0px;
-        padding: 0px;
-        -webkit-tap-highlight-color: transparent;
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-      "
-    >
-    </iframe>
-  </body>
+        <iframe
+            frameborder="0"
+            allowtransparency="true"
+            src="https://checkout.stripe.com/v3/JdhudoUwvSFS85kPDZEQ.html?distinct_id=6fc92829-18d9-1742-7119-7e180b6b2dbe"
+            name="stripe_checkout_app"
+            class="stripe_checkout_app"
+            style="
+                z-index: 2147483647;
+                display: none;
+                background: rgba(0, 0, 0, 0.004);
+                border: 0px none transparent;
+                overflow: hidden auto;
+                visibility: visible;
+                margin: 0px;
+                padding: 0px;
+                -webkit-tap-highlight-color: transparent;
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+            "
+        >
+        </iframe>
+    </body>
 </template>
 
 <script>
@@ -1482,6 +1778,4 @@ export default {
 };
 </script>
 
-<style>
-
-</style>
+<style></style>

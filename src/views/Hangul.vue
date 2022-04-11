@@ -74,10 +74,11 @@
                                                     mt-4=""
                                                 >
                                                     <div class="btn__content">
-                                                        <i
+                                                      <i
                                                             aria-hidden="true"
-                                                            class="icon theme--dark fas fa-angle-right"
-                                                        ></i>
+                                                                class="icon theme--dark fas fa-angle-right material-icons"
+                                                                style="display:flex"
+                                                            >keyboard_arrow_right</i>
                                                     </div>
                                                 </button>
                                                 <button
@@ -86,10 +87,11 @@
                                                     mt-4=""
                                                 >
                                                     <div class="btn__content">
-                                                        <i
+                                                      <i
                                                             aria-hidden="true"
-                                                            class="icon theme--dark fas fa-angle-double-right"
-                                                        ></i>
+                                                                class="icon theme--dark fas fa-angle-right material-icons"
+                                                                style="display:flex"
+                                                            >keyboard_double_arrow_right</i>
                                                     </div>
                                                 </button>
                                             </div>
@@ -477,26 +479,30 @@
                                             <div
                                                 class="layout row justify-center align-center mt-2 mb-2"
                                             >
-                                                <button
+                                                 <button
                                                     type="button"
                                                     class="btn btn--floating btn--small theme--dark cyanBlue lighten-1"
+                                                    mt-4=""
                                                 >
                                                     <div class="btn__content">
-                                                        <i
+                                                      <i
                                                             aria-hidden="true"
-                                                            class="icon theme--dark fas fa-angle-double-left"
-                                                        ></i>
+                                                                class="icon theme--dark fas fa-angle-right material-icons"
+                                                                style="display:flex"
+                                                            >keyboard_arrow_right</i>
                                                     </div>
                                                 </button>
                                                 <button
                                                     type="button"
                                                     class="btn btn--floating btn--small theme--dark cyanBlue lighten-1"
+                                                    mt-4=""
                                                 >
                                                     <div class="btn__content">
-                                                        <i
+                                                      <i
                                                             aria-hidden="true"
-                                                            class="icon theme--dark fas fa-angle-left"
-                                                        ></i>
+                                                                class="icon theme--dark fas fa-angle-right material-icons"
+                                                                style="display:flex"
+                                                            >keyboard_double_arrow_right</i>
                                                     </div>
                                                 </button>
                                                 <div
@@ -507,30 +513,31 @@
                                                     <h1>Latest</h1>
                                                     <!---->
                                                 </div>
-                                                <button
-                                                    disabled="disabled"
+                                                    <button
                                                     type="button"
-                                                    class="btn btn--disabled btn--floating btn--small theme--dark cyanBlue lighten-1"
+                                                    class="btn btn--floating btn--small theme--dark cyanBlue lighten-1"
                                                     mt-4=""
-                                                >
+                                                    >
                                                     <div class="btn__content">
                                                         <i
                                                             aria-hidden="true"
-                                                            class="icon theme--dark fas fa-angle-right"
-                                                        ></i>
+                                                                class="icon theme--dark fas fa-angle-right material-icons"
+                                                                style="display:flex"
+                                                            >keyboard_arrow_right
+                                                        </i>
                                                     </div>
                                                 </button>
-                                                <button
-                                                    disabled="disabled"
+                                                 <button
                                                     type="button"
-                                                    class="btn btn--disabled btn--floating btn--small theme--dark cyanBlue lighten-1"
+                                                    class="btn btn--floating btn--small theme--dark cyanBlue lighten-1"
                                                     mt-4=""
                                                 >
                                                     <div class="btn__content">
-                                                        <i
+                                                      <i
                                                             aria-hidden="true"
-                                                            class="icon theme--dark fas fa-angle-double-right"
-                                                        ></i>
+                                                                class="icon theme--dark fas fa-angle-right material-icons"
+                                                                style="display:flex"
+                                                            >keyboard_double_arrow_right</i>
                                                     </div>
                                                 </button>
                                             </div>

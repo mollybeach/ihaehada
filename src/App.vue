@@ -1,33 +1,32 @@
 <template>
-  <v-app>
-    <Header/>
-    <router-view />
-    <Footer/> 
-  </v-app>
+    <v-app>
+        <Header />
+        <router-view />
+        <Footer />
+    </v-app>
 </template>
 
 <script>
-import Header from '@/components/Header.vue';
-import Footer from '@/components/Footer.vue';
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 export default {
-  name: 'App',
-  components: {
-    Header,
-    Footer,
-  },
-  data () {
-    return {
-      navBar: false,
-    }
-  },
-
-}
+    name: "App",
+    components: {
+        Header,
+        Footer,
+    },
+    data() {
+        return {
+            navBar: false,
+        };
+    },
+};
 </script>
 <style>
 @font-face {
-  font-family: "disposabledroid-bb";
-  src: local(“disposabledroid-bb”),
-    url(./assets/fonts/disposabledroid-bb.regular.ttf) format("truetype")
+    font-family: "disposabledroid-bb";
+    src: local(“disposabledroid-bb”),
+        url(./assets/fonts/disposabledroid-bb.regular.ttf) format("truetype");
 }
 
 a {
@@ -534,14 +533,14 @@ a {
     z-index: 0;
     display: none;
 }
-/*Seikatsu Color Themes*/ 
+/*Seikatsu Color Themes*/
 
 /*TEXT*/
 .purple-night-text {
-  color: #2b275c !important;
+    color: #2b275c !important;
 }
 .violet-med-text {
-  color: #6a75b7 !important;
+    color: #6a75b7 !important;
 }
 .cyan-blue-text {
     color: #9dc9c1 !important;
@@ -550,18 +549,18 @@ a {
     color: #88b0bf !important;
 }
 .dark-cyan-text {
-  color: #007488 !important;
+    color: #007488 !important;
 }
 /*BACKGROUND*/
 .purple-night-background {
-  background-color: #2b275c !important;
-  border: 5px solid #2b275c !important;
-  border-radius: 16px;
+    background-color: #2b275c !important;
+    border: 5px solid #2b275c !important;
+    border-radius: 16px;
 }
 .violet-med-background {
-  background-color: #6a75b7 !important;
-  border: 5px solid #6a75b7 !important;
-  border-radius: 16px;
+    background-color: #6a75b7 !important;
+    border: 5px solid #6a75b7 !important;
+    border-radius: 16px;
 }
 /* Header*/
 .cyan-blue-background {
@@ -574,10 +573,10 @@ a {
     border: 5px solid #88b0bf !important;
     border-radius: 16px;
 }
-.dark-cyan-background{
-  background-color: #007488 !important;
-  border: 5px solid #007488 !important;
-  border-radius: 16px;
+.dark-cyan-background {
+    background-color: #007488 !important;
+    border: 5px solid #007488 !important;
+    border-radius: 16px;
 }
 
 .tooltip__content {
@@ -2249,8 +2248,8 @@ a {
     caret-color: #00b8d4 !important;
 }
 .cyanBlue {
-    background-color: #9dc9c1!important;
-    border-color:#9dc9c1 !important;
+    background-color: #9dc9c1 !important;
+    border-color: #9dc9c1 !important;
 }
 .cyanBlue--text {
     color: #9dc9c1 !important;
@@ -4497,7 +4496,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family:disposabledroid-bb;
+    font-family: disposabledroid-bb;
 }
 b,
 strong {
@@ -6606,7 +6605,7 @@ p {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 16px;
-    font-family:disposabledroid-bb;
+    font-family: disposabledroid-bb;
 }
 .card__title--primary {
     padding-top: 24px;
@@ -6614,7 +6613,7 @@ p {
 .card__text {
     padding: 16px;
     width: 100%;
-    font-family:disposabledroid-bb;
+    font-family: disposabledroid-bb;
 }
 .card__media {
     display: -webkit-box;
@@ -13581,7 +13580,7 @@ table.table tfoot tr td {
     width: 100%;
 }
 .toolbar__title {
-    font-size:30px;
+    font-size: 30px;
     font-weight: 500;
     letter-spacing: 0.02em;
     margin-left: 16px;
@@ -13733,7 +13732,7 @@ table.table tfoot tr td {
         padding: 10px 16px;
     }
 }
-.title-header{
-  font-size: 64px;
+.title-header {
+    font-size: 64px;
 }
 </style>

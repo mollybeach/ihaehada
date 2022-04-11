@@ -1,32 +1,29 @@
 <template>
     <body>
         <main>
-                <div class="card">
-                    <h1 slot="header" class="title-header">Numbers</h1>
-                    <div class="word">
+            <div class="card">
+                <h1 slot="header" class="title-header">Numbers</h1>
+                <div class="word">
+                    <div v-for="number in numbers" :key="number.id">
+                        <div class="english">{{ number.id }}</div>
                         <div
-                            v-for="number in numbers"
-                            :key="number.id"
+                            class="hear"
+                            v-for="value in number.values"
+                            :key="value.values"
+                            v-on:click="readAloud(value.korean)"
                         >
-                            <div class="english">{{ number.id }}</div>
-                            <div
-                                class="hear"
-                                v-for="value in number.values"
-                                :key="value.values"
-                                v-on:click="readAloud(value.korean)"
-                            >
-                                <button class="read-button korean">
-                                    {{ value.korean }}
-                                </button>
-                                <div class="pronunciation">
-                                    {{ value.romance }}
-                                </div>
+                            <button class="read-button korean">
+                                {{ value.korean }}
+                            </button>
+                            <div class="pronunciation">
+                                {{ value.romance }}
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- use the imported card component -->
-                <CardComponent :number="phrases" />
+            </div>
+            <!-- use the imported card component -->
+            <CardComponent :number="phrases" />
         </main>
     </body>
 </template>
@@ -43,8 +40,8 @@ export default {
 
     data() {
         return {
-            numbers:[
-                                {
+            numbers: [
+                {
                     id: "1",
                     values: [
                         {
@@ -151,10 +148,9 @@ export default {
                             romance: "Yeol Bul",
                         },
                     ],
-                }
-            ]
-        }
-
+                },
+            ],
+        };
     },
     methods: {
         isMobile() {
@@ -219,7 +215,6 @@ a router-link {
     width: 80%;
     border-radius: 2rem;
     box-shadow: 0 8px 96px rgb(209, 198, 198);
-   
 }
 
 .card {
