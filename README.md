@@ -9,7 +9,6 @@ or view it [here](https://ihaehada.web.app/).
 Website Design: 
 
 ![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715385/ihaehada/web1_xxqxpf.png)
-![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715383/ihaehada/web5_agdws6.png)
 ![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715383/ihaehada/web2_y2tj98.png)
 ![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715387/ihaehada/web3_hd2klp.png)
 ![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715385/ihaehada/web4_nz9im0.png)
