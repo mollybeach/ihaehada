@@ -1,7 +1,19 @@
 ## Purpose
 #ihaehada 
-#korean lessons website
-https://ihaehada.firebaseapp.com/
+![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649712911/ihaehada/koreandiscordimg_kzqd6h.png)
+learn korean language app browse the ihaehada collection of words and phrases
+View our website 
+[here](https://ihaehada.firebaseapp.com/)
+or view it [here](https://ihaehada.web.app/).
+
+Website Design: 
+
+![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715385/ihaehada/web1_xxqxpf.png)
+![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715383/ihaehada/web5_agdws6.png)
+![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715383/ihaehada/web2_y2tj98.png)
+![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715387/ihaehada/web3_hd2klp.png)
+![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715385/ihaehada/web4_nz9im0.png)
+
 This is a start-up kit for a Firebase web project, which uses Vue.js.0
 
 There is also a start-up kit using Vue3.
@@ -29,22 +41,6 @@ In the project directory, you can run:
 
 
 ### `npm run serve`
-
-#ihaehada 
-![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649712911/ihaehada/koreandiscordimg_kzqd6h.png)
-learn korean language app browse the ihaehada collection of words and phrases
-View our website 
-[here](https://ihaehada.firebaseapp.com/)
-or view it [here](https://ihaehada.web.app/).
-
-Website Design: 
-
-![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715385/ihaehada/web1_xxqxpf.png)
-![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715383/ihaehada/web5_agdws6.png)
-![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715383/ihaehada/web2_y2tj98.png)
-![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715387/ihaehada/web3_hd2klp.png)
-![alt text](https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1649715385/ihaehada/web4_nz9im0.png)
-
 Runs the app in the development mode.<br>
 Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
