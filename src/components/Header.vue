@@ -3,17 +3,7 @@
   <!-- chnage this to v-toolbar -->
     <v-navigation-drawer fixed clipped app v-model="navBar" class="navdrawer, application theme--light" data-app="true">
       <v-list dense class="pt-0">
-        <router-link to="/Signin" v-if="!logined"  class="btn--active btn btn--flat btn--router">
-          <v-list-tile>
-            <v-list-tile-action>
-              <v-icon>dashboard</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>Signin</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </router-link>
-        <router-link to="/" class="btn--active btn btn--flat btn--router">
+      <router-link to="/" class="btn--active btn btn--flat btn--router">
           <v-list-tile>
             <v-list-tile-action>
               <v-icon>dashboard</v-icon>
@@ -23,7 +13,16 @@
             </v-list-tile-content>
           </v-list-tile>
         </router-link>
-
+          <router-link to="/Hangul" class="btn--active btn btn--flat btn--router">
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>dashboard</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title>Hangul</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        </router-link>
         <router-link to="/Words"  class="btn--active btn btn--flat btn--router">
           <v-list-tile>
             <v-list-tile-action>
@@ -34,21 +33,7 @@
             </v-list-tile-content>
           </v-list-tile>
         </router-link>
-
-
-                <router-link to="/Hangul" class="btn--active btn btn--flat btn--router">
-          <v-list-tile>
-            <v-list-tile-action>
-              <v-icon>dashboard</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>Hangul</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </router-link>
-
-
-                <router-link to="/Numbers" class="btn--active btn btn--flat btn--router">
+        <router-link to="/Numbers" class="btn--active btn btn--flat btn--router">
           <v-list-tile>
             <v-list-tile-action>
               <v-icon>dashboard</v-icon>
@@ -58,9 +43,7 @@
             </v-list-tile-content>
           </v-list-tile>
         </router-link>
-
-
-                <router-link to="/About" class="btn--active btn btn--flat btn--router">
+        <router-link to="/About" class="btn--active btn btn--flat btn--router">
           <v-list-tile>
             <v-list-tile-action>
               <v-icon>dashboard</v-icon>
@@ -70,6 +53,18 @@
             </v-list-tile-content>
           </v-list-tile>
         </router-link>
+
+        <router-link to="/Signin" v-if="!logined"  class="btn--active btn btn--flat btn--router">
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>dashboard</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title>Signin</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        </router-link>
+
 
 
         <router-link to="/Protected" v-if="logined"  class="btn--active btn btn--flat btn--router">

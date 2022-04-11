@@ -254,35 +254,7 @@
                 </div>
                             </div>
                           </div>
-                          <div class="flex xs12 sm6 md4 lg4 xl4">
-                            <div
-                              class="ma-2 pa-3 pt-0 card--hover"
-                              style="height: auto"
-                              >
-                              <!--  <h5 Miner #1</h5>-->
-                <div class="card">
-                    <h1 slot="header">Wednesday Feb 16th 2022</h1>
-                    <div class="word">
-                        <div v-for="item in items.slice(62, 82)" :key="item.id">
-                            <div class="english">{{ item.id }}</div>
-                            <div
-                                class="hear"
-                                v-for="value in item.values"
-                                :key="value.values"
-                                v-on:click="readAloud(value.korean)"
-                            >
-                                <button class="read-button korean">
-                                    {{ value.korean }}
-                                </button>
-                                <div class="pronunciation">
-                                    {{ value.romance }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                            </div>
-                          </div>
+
                                                     <div class="flex xs12 sm6 md4 lg4 xl4">
                             <div
                               class="ma-2 pa-3 pt-0 card--hover"
