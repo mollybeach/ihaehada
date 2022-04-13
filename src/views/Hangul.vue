@@ -842,7 +842,7 @@ export default {
                 { id: "ch", text: "ㅊ" },
             ],
             compound_vowels: [
-                { id: "e", text: "ㅔ" },
+                { id: "e", text: "에" },
                 { id: "ye", text: "ㅖ" },
                 { id: "ae", text: "ㅐ" },
                 { id: "yae", text: "ㅒ" },
@@ -850,8 +850,8 @@ export default {
                 { id: "we", text: "ㅚ" },
                 { id: "wae", text: "ㅙ" },
                 { id: "wuh:", text: "ㅝ" },
-                { id: "wi", text: "ㅞ" },
-                { id: "we", text: "ㅟㅣ" },
+                { id: "wi", text: "웨" },
+                { id: "we", text: "위" },
                 { id: "eui", text: "ㅢ" },
             ],
         };

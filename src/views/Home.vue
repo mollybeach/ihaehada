@@ -59,6 +59,7 @@
 </template>
 
 <script>
+
 /* eslint-disable vue/no-unused-components */
 import CardComponent from "../components/CardComponent.vue";
 
@@ -160,10 +161,21 @@ export default {
                         },
                     ],
                 },
+                {
+                    id: "What is your name?",
+                    values: [
+                        {
+                            korean: "이름 뭐 ?",
+                            romance: "ileum mwo?",
+                        },
+                    ],
+                },
             ],
         };
     },
+   
     methods: {
+       
         isMobile() {
             return true;
             /* return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -180,6 +192,8 @@ export default {
         },
     },
 };
+
 </script>
 
 <style></style>
+

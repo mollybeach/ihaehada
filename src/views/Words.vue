@@ -1634,123 +1634,32 @@ export default {
                         },
                     ],
                 },
-                /*Week 9:
-    english:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
-    romanace: Hana, Bul, Set, Net,DaSeot, YeoSeot, Ilgeob, YeolDeol, Ahop, Yeol, Yeol Hana, Yeol Bul
-    korean: 하나, 둘, 셋, 넷, 다섯, 여섯, 일곱, 여덟, 아홉, 열, 열한, 열두, 열세,
+                /*Week 19: to be pretty, the best, restroom , bathroom,, teacher, doctor ,husband , korean, english,, american, vietnamese, japanese, student, pencil, desk, chair, table,  book, grandmother, grandfather, */
+                {
+                    id: "to be pretty",
+                    values: [
+                        {
+                            korean: "아름답다",
+                            romance: "arum-dada",
+                        },
+                    ]
+                },
+                { 
+                    id: "the best",
+                    values: [
+                        {
+                            korean: "최고",
+                            romance: "chog-dae",
+                        },
+                    ]
 
-    */
-                {
-                    id: "1",
-                    values: [
-                        {
-                            korean: "하나",
-                            romance: "Hana",
-                        },
-                    ],
-                },
-                {
-                    id: "2",
-                    values: [
-                        {
-                            korean: "둘",
-                            romance: "Bul",
-                        },
-                    ],
-                },
-                {
-                    id: "3",
-                    values: [
-                        {
-                            korean: "셋",
-                            romance: "Set",
-                        },
-                    ],
-                },
-                {
-                    id: "4",
-                    values: [
-                        {
-                            korean: "넷",
-                            romance: "Net",
-                        },
-                    ],
-                },
-                {
-                    id: "5",
-                    values: [
-                        {
-                            korean: "다섯",
-                            romance: "DaSeot",
-                        },
-                    ],
-                },
-                {
-                    id: "6",
-                    values: [
-                        {
-                            korean: "여섯",
-                            romance: "YeoSeot",
-                        },
-                    ],
-                },
-                {
-                    id: "7",
-                    values: [
-                        {
-                            korean: "일곱",
-                            romance: "Ilgeob",
-                        },
-                    ],
-                },
-                {
-                    id: "8",
-                    values: [
-                        {
-                            korean: "여덟",
-                            romance: "Yeol Deol",
-                        },
-                    ],
-                },
-                {
-                    id: "9",
-                    values: [
-                        {
-                            korean: "아홉",
-                            romance: "Ahop",
-                        },
-                    ],
-                },
-                {
-                    id: "10",
-                    values: [
-                        {
-                            korean: "열",
-                            romance: "Yeol",
-                        },
-                    ],
-                },
-                {
-                    id: "11",
-                    values: [
-                        {
-                            korean: "열한",
-                            romance: "Yeol Hana",
-                        },
-                    ],
-                },
-                {
-                    id: "12",
-                    values: [
-                        {
-                            korean: "열두",
-                            romance: "Yeol Bul",
-                        },
-                    ],
-                },
+                }
+
+                
             ],
         };
     },
+
     methods: {
         isMobile() {
             return true;
