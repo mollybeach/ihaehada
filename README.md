@@ -52,7 +52,7 @@ Builds the app for production to the `dist` folder.<br>
 It correctly bundles Vue in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!!!!
+Your app is ready to be deployed!
 
 ### `firebase deploy`
 
