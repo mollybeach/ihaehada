@@ -56,7 +56,7 @@ Your app is ready to be deployed!!!
 
 ### `firebase deploy`
 
-Deploys the app to the Firebase cloud. You need to run "npm run build" before the deployment.
+Deploys the app to the Firebase cloud. You need to run "npm run build" before the deployment..
 
 
 
