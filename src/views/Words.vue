@@ -586,7 +586,7 @@
                                                     class="ma-2 pa-3 pt-0 card--hover"
                                                     style="height: auto"
                                                 >
-                                                    <!--  <h5 Miner #1</h5>--->
+                                                    <!--  <h5 Miner #1</h5>---->
 
                                                     <div class="card">
                                                         <h1 slot="header">
