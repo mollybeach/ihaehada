@@ -48,7 +48,7 @@ You will also see any lint errors in the console.
 
 ### `npm run build`
 
-Builds the app for production to the `dist` folder.<br>..
+Builds the app for production to the `dist` folder.<br>...
 
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!!!
