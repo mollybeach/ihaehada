@@ -30,7 +30,7 @@ https://github.com/isamu/firebase-vue3-startup-kit
 6. From the dashboard of this project, add an app and choose "web" (</>).
 7. From the setting of this app, choose "Config" (in Firebase SDK snippet)
 8. Copy the config file, and paste into src/firebase/firebase.js file.  ..
-9. Replace the word "fir-vue-startup-kit" in .firebaserc file with your Firebase project name.........
+9. Replace the word "fir-vue-startup-kit" in .firebaserc file with your Firebase project name......
 10. Open the firebase console, and create a Cloud Firestore (make it "secure" for now).
 
 
