@@ -55,8 +55,7 @@ Your app is ready to be deployed!!!
 
 ### `firebase deploy`
 
-........
-
+..........
 
 
 # ihaehada
