@@ -17,7 +17,7 @@ Website Design: ..
 #ihaehada  <br />
 This is a start-up kit for a Firebase web project, which uses Vue.js.0 <br />
 
-There is also a start-up kit using Vue3.
+There is also a start-up kit using Vue3...
 
 https://github.com/isamu/firebase-vue3-startup-kit
 ## Instruction
