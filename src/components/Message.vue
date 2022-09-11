@@ -28,7 +28,7 @@ export default {
     return {
       db: null,
       messages: [],
-      form_message: "",
+      form_message: "hi",
       detacher: null,
     }
   },
